@@ -1,0 +1,10 @@
+# Release documentation and artwork only. Approved BIN files belong in
+# GitHub Release attachments, never in this repository's source tree.
+*
+!*/
+!*.md
+!*.png
+!*.jpg
+!*.jpeg
+!*.pdf
+!.gitignore
