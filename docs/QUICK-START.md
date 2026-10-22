@@ -1,10 +1,10 @@
-# Your first Auto Sample program
+# S56K Expanded Edition · Quick start
 
 **Start with one note. Listen. Then expand the range.**
 
-[Home](../README.md) · [Full user guide](USER-GUIDE.md)
+[Home](../README.md) · [Full user guide](USER-GUIDE.md) · [Installation](INSTALLATION.md)
 
-> No firmware BIN is published here yet. These steps describe use once an appropriate Personal Edition build is running. Follow the installation and hardware-test instructions accompanying the specific release.
+These steps begin with **S56K Expanded Edition v1** running on your sampler. For loading and permanent installation, follow the [installation guide](INSTALLATION.md) and read the [risk disclaimer](../DISCLAIMER.md).
 
 ## 1. Connect your instrument
 
@@ -55,3 +55,6 @@ For a sustained patch, try AUTO END **TAIL ONLY** to retain the full held note w
 Listen across the completed program, then use the ordinary **SAVE** page to save the program **with its samples**. Auto Sample never saves the recordings to disk automatically.
 
 Avoid simultaneous ak.Sys/SysEx sample editing during Auto Loop. CANCEL retains completed assignments in RAM.
+
+
+[Explore all the controls →](USER-GUIDE.md) · [Compatibility](COMPATIBILITY.md)

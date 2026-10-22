@@ -1,7 +1,7 @@
-# Visual assets
+# S56K Expanded Edition · Visual assets
 
-The artwork folder contains the finished landing-page panels. The screens folder contains native firmware renders used in the illustrated guides.
+The **artwork/** folder contains the landing-page panels. The studio hero is adapted from the user-supplied image of the S6000 and S5000 using image generation, with project typography composed separately for exact lettering. It is presentation artwork, not a photograph documenting a firmware test. The previous decorative waveform has been replaced.
 
-The interface images preserve the original 320 × 240 pixel grid. Larger landing-page panels place those screens into a white presentation layout. Example progress figures are illustrative display states, not a record of physical hardware testing.
+The **screens/** folder contains native firmware renders. They preserve the original **320 × 240** pixel grid and show the implemented interface. Example program names, settings and progress counts are display fixtures, not captured audio or physical-device test results. The boot images show the correct model-specific EX lettering and **EXPANDED EDITION v1** caption.
 
-The decorative waveform was generated as artwork. Titles and explanatory copy were composed separately for accurate lettering. No image-generation scripts, firmware or rendering tools are stored in this repository.
+The white feature panels place native screens beside concise explanations. Source graphics, typography, layout work and render tooling are maintained outside this documentation repository. No firmware, source code or image-generation scripts are stored here.

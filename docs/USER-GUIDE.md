@@ -1,16 +1,18 @@
-# Personal Edition · User guide
+# S56K Expanded Edition · User guide
 
 **Turn an external instrument into an Akai program, one note at a time.**
 
-[Home](../README.md) · [Quick start](QUICK-START.md)
+**Version 1 · AKAI S5000 / S6000**
 
-> **Documentation preview.** No firmware BIN is published in this repository yet. This guide describes the current development feature set for the S5000 and S6000. Use the installation instructions and hardware-test status supplied with a future release before loading it.
+[Home](../README.md) · [Quick start](QUICK-START.md) · [PDF manual](S56K-Expanded-Edition-User-Guide.pdf) · [Installation](INSTALLATION.md)
+
+Read the [installation guide](INSTALLATION.md), [compatibility notes](COMPATIBILITY.md) and [risk disclaimer](../DISCLAIMER.md) before loading or installing firmware.
 
 Auto Sample sends MIDI notes to an external instrument, records its audio and assigns the recordings to the current program. You choose the pitches, velocity layers and recording behaviour. Optional Auto Loop processing prepares sustained samples after each recording.
 
 **Create and name the program first → capture into RAM → listen and edit → save manually.**
 
-The screen images below are captured from the firmware's native renderer in controlled tests. They show the implemented interface, rather than photographs of a physical LCD. Displayed program names and progress are examples.
+The screen images show the implemented interface at its native resolution. They are firmware renders with example names, settings and progress states; physical LCD appearance may differ.
 
 ## 1. Connect and prepare
 
@@ -59,7 +61,7 @@ Velocity may change the instrument's tone as well as its loudness. Recording gai
 
 ![Velocity page showing four capture velocities and the calculated playback ranges for each layer](../assets/screens/velocities.png)
 
-Open **VELOCITIES** and choose one to four layers. Each layer specifies the MIDI velocity sent to the instrument. The displayed **PLAY RANGE** shows which incoming velocities will select that layer when you play the completed Akai program.
+Open **VELOCITIES** and choose one to four layers. Each layer specifies the MIDI velocity sent to the instrument. The displayed **PLAY RANGE** shows which incoming velocities will select that layer when you play the completed Akai program. Only the selected number of layers is displayed: with one layer, the other three rows are hidden.
 
 Changing the layer count resets the capture velocities to a starting arrangement. Adjust them afterwards to suit the instrument. Velocities must increase from layer to layer; the controls maintain that order.
 
@@ -127,7 +129,7 @@ Crossfade amount is limited by the available pre-loop audio and loop length. A l
 
 The sampler records the external release before processing the loop. Cropping does not skip that waiting period. For the finished looped program, adjust playback release using the Akai's envelope controls.
 
-Auto Loop checks each channel and can leave a recording unlooped for review. Listen to these results in the ordinary sample editor. Evolving pads, heavy chorus, noisy textures and rhythmic material may require different positions or manual editing. The setup page intentionally has no waveform because its recordings do not exist yet.
+Auto Loop checks each channel and can leave a recording unlooped for review. Listen to these results in the ordinary sample editor. Evolving pads, heavy chorus, noisy textures and rhythmic material may require different positions or manual editing. Loop Setup contains settings for the recordings you are about to make. Use the ordinary sample editor to inspect their waveforms after capture.
 
 ## 7. Run, listen and save
 
@@ -159,6 +161,12 @@ After completion, play across the keygroups and velocity boundaries. For looped 
 
 For useful feedback, include your sampler model, mono/stereo mode, source instrument, capture and loop settings, the displayed message and what you expected to hear. A photo of the relevant screen is helpful.
 
+## 9. Expanded Edition startup
+
+The boot screen shows a CPU/circuit graphic, the correct **S5000 EX** or **S6000 EX** model logo, and **EXPANDED EDITION v1**. The EX lettering is outlined to match the model design.
+
+The separate **Operating System VERSION 2.14** field is retained for compatibility. Expanded Edition v1 identifies the added feature set; it does not change the underlying Akai version identity. Use the checksum accompanying a firmware download to identify its exact file.
+
 ---
 
-[Back to the release page](../README.md) · [Try the quick start](QUICK-START.md)
+[Home](../README.md) · [Quick start](QUICK-START.md) · [Installation](INSTALLATION.md) · [Compatibility](COMPATIBILITY.md) · [Risk disclaimer](../DISCLAIMER.md)

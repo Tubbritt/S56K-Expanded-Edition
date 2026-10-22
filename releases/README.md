@@ -1,21 +1,31 @@
-# Releases
+# S56K Expanded Edition releases
 
-[Home](../README.md) · [Quick start](../docs/QUICK-START.md) · [Compatibility & testing](../docs/COMPATIBILITY.md)
+[Home](../README.md) · [Version 1 release notes](v1.md) · [Installation](../docs/INSTALLATION.md) · [Flashing disclaimer](../DISCLAIMER.md)
 
-## No firmware download published yet
+## Expanded Edition v1
 
-This area is ready for Personal Edition releases. For now, you can explore the illustrated guides and implemented features. There is no BIN, firmware archive or download hidden in this repository.
+Automatic instrument sampling, velocity layers, optional loop preparation and a refreshed EX startup identity for the **AKAI S5000 and S6000**.
 
-## What a release will include
+**[Read the v1 release notes →](v1.md)**
+
+**Firmware download: not published.** The guides, feature descriptions and release notes are available here; no OS BIN or firmware archive is currently attached or stored in this repository.
+
+## Download contents
+
+When the firmware is published, its clearly named attachment will appear under [GitHub Releases](https://github.com/Tubbritt/S56K-Personal-Edition/releases), accompanied by:
 
 | Item | Purpose |
 | --- | --- |
-| **Firmware BIN** | The approved S5000/S6000 image for that release. |
-| **SHA-256 checksum** | Identifies the exact file so a download or floppy read-back can be checked. |
-| **Release notes** | Explains the changes and any known limitations. |
-| **Installation guide** | Gives the supported loading/update route for that specific build. |
-| **Hardware-test status** | Separately records model, temporary boot, permanent flash and USB results where available. |
+| **S56K-EX.bin** | The shared S5000/S6000 operating-system image. |
+| **SHA-256 checksum** | Identifies the exact file and supports download and floppy read-back checks. |
+| **Release notes** | Features, changes and known limitations for that version. |
+| **Installation instructions** | The loading and update route applicable to the specific file. |
+| **Compatibility information** | Model and installation-method evidence for that exact version. |
 
-Approved firmware files will be attached to **[GitHub Releases](https://github.com/Tubbritt/S56K-Personal-Edition/releases)**. The repository itself is for release notes, documentation and artwork. Development source, build tools and reverse-engineering material do not belong here.
+Read the [installation guide](../docs/INSTALLATION.md), [compatibility notes](../docs/COMPATIBILITY.md) and [flashing disclaimer](../DISCLAIMER.md) before deciding to install. A successful check or previous installation does not guarantee a risk-free update.
 
-The automatic “Source code” ZIP/TAR links that GitHub adds to a future tagged release will contain only this documentation repository. The clearly named firmware attachment will be the download to use for the sampler.
+## About this repository
+
+This is the documentation and release home for S56K Expanded Edition. Firmware development source, build tools and reverse-engineering material are not hosted here. The repository address retains its original name, **S56K-Personal-Edition**; the product name is **S56K Expanded Edition**.
+
+GitHub's automatic **“Source code” ZIP/TAR** links contain only this documentation repository. They are not sampler firmware. Use only a separately published, clearly identified firmware attachment and its matching checksum.

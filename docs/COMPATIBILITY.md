@@ -1,24 +1,22 @@
-# Compatibility & testing
+# S56K Expanded Edition · Compatibility
 
-[Home](../README.md) · [User guide](USER-GUIDE.md) · [Release status](../releases/README.md)
+[Home](../README.md) · [User guide](USER-GUIDE.md) · [Installation](INSTALLATION.md) · [Release information](../releases/README.md)
 
-Personal Edition targets the **AKAI S5000 and S6000**, using the shared v2.14 operating-system foundation. Auto Sample uses the sampler's MIDI outputs and recording inputs. USB is not required for the sampling workflow.
+**S56K Expanded Edition v1** is designed for the **AKAI S5000 and S6000**, using their shared v2.14 operating-system foundation. One model-aware firmware image supplies the features and the appropriate startup artwork for each sampler.
 
-## What is available here?
+Auto Sample uses the sampler's MIDI outputs and recording inputs. USB is not required for the sampling workflow. The visible **EXPANDED EDITION v1** label identifies this project's additions; the underlying OS/settings/protocol identity remains **2.14**.
 
-This repository currently contains documentation and artwork. **No firmware BIN or installation archive has been published here.** The illustrated guide describes the current development feature set; it is not an announcement that a final release has passed every hardware test.
+## Verification evidence
 
-## Verification status
-
-| Area | Current evidence |
+| Area | Evidence and limits |
 | --- | --- |
-| Earlier Auto Sample / Personal Edition builds | User-reported operation on both S5000 and S6000. |
-| Earlier corrected floppy installer | A successful floppy flash and reboot was reported. |
-| Current GUI-cleanup candidate | Passed 15 software verification suites and a scoped independent review. A complete physical test of this exact candidate is still pending. |
-| Current floppy and USB installation paths | Passed bounded software checks for writing, read-back verification and restart. |
-| Windows / ak.Sys USB installation | Actual host-to-sampler installation remains unverified. |
+| **Auto Sample on S5000 and S6000** | Successful operation was reported on both models during feature development. |
+| **Permanent installation from floppy** | A successful flash and subsequent reboot were reported for an earlier corrected installer build. |
+| **Current EX artwork image** | Passed all 15 software verification suites and a scoped independent review. The latest corrected logos and caption still await physical confirmation on both models. |
+| **Floppy and USB flash routines** | Passed bounded software checks covering writing, read-back verification and restart behavior. This does not establish every real device or host configuration. |
+| **Windows / ak.Sys USB installation** | End-to-end installation on hardware remains unverified. USB boot without installation is not a supported workflow. |
 
-The software checks exercise native firmware routines with controlled inputs and device models. They are not a complete sampler emulator and do not establish risk-free flashing. Future downloads will carry their own exact build identity, installation instructions and hardware-test status.
+A successful earlier build does not certify every later image. Firmware downloads are identified by a SHA-256 checksum; consult the installation notes and verification status accompanying the exact file you use. The software checks exercise native routines with controlled inputs and device models, rather than a complete hardware emulator. No installation is guaranteed risk-free; read the [risk disclaimer](../DISCLAIMER.md).
 
 ## Before a capture session
 
@@ -28,16 +26,16 @@ The software checks exercise native firmware routines with controlled inputs and
 - Avoid simultaneous sample editing through ak.Sys or SysEx while Auto Loop is running.
 - Save the program **with its samples** through the normal SAVE page before switching off.
 
-Auto Loop is optional and cannot guarantee a clean musical loop for every sound. Recordings that fail the normal loop checks are kept in their original form for review. See the [loop guide](USER-GUIDE.md#6-loop-the-sustained-part) for cropping and release-tail behaviour.
+Auto Loop is optional. Its native processing can prepare useful sustain loops, but results depend on the sound. Recordings that fail the normal loop checks retain their original audio for review. See the [loop guide](USER-GUIDE.md#6-loop-the-sustained-part) for cropping and release-tail behavior.
 
 ## Loading and installation
 
-Use the instructions supplied with the specific future release. For current development testing, the established first step is a temporary floppy boot followed by **NO** at the “Write Flash OS” prompt, then checking the feature before considering a permanent installation.
+The [installation guide](INSTALLATION.md) separates temporary floppy loading from permanent flash installation. The established first check is to boot from a readable floppy and select **NO** at the “Write Flash OS” prompt. Confirm operation before considering a permanent update.
 
-USB updating and temporary floppy booting are separate operations. **USB boot without installation is not an advertised feature.** No new installation should be attempted using these preview documents alone.
+Firmware downloads are withheld from this repository at present. See [Release information](../releases/README.md) for availability. The guide and screenshots are documentation, not an alternative firmware download.
 
 ## About the images
 
-The screen captures were produced by the current firmware's native rendering routines. They show the implemented menus at the original 320 × 240 resolution. The program name, settings and progress figures are examples; the images do not claim that an illustrated capture was recorded on physical hardware.
+The screen gallery uses native firmware renders at the original **320 × 240** resolution. Program names, settings and progress figures are examples; actual physical LCD appearance varies.
 
-The landing-page waveform is decorative artwork. It does not represent a loop-search display or an audio measurement.
+The landing-page studio image is presentation artwork. It illustrates the two sampler models and the workflow, rather than documenting a hardware test or measured audio result.
