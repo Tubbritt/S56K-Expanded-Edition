@@ -4,7 +4,7 @@ S56K Expanded Edition's repository is home to release information, user guides a
 
 ## Report an issue
 
-Documentation corrections and clear device observations are welcome through [Issues](https://github.com/Tubbritt/S56K-Personal-Edition/issues). Include:
+Documentation corrections and clear device observations are welcome through [Issues](https://github.com/Tubbritt/S56K-Expanded-Edition/issues). Include:
 
 - Sampler model and the exact firmware version or file checksum.
 - How it was loaded or installed: temporary floppy boot, permanent floppy flash or another method.

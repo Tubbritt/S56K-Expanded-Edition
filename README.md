@@ -68,7 +68,7 @@ One firmware image selects the right artwork for your sampler. The separate **Op
 | **[Version 1 release notes](releases/v1.md)** | Features, behavior and practical limits. |
 | **[Compatibility](docs/COMPATIBILITY.md)** | Model support and the available software/hardware verification evidence. |
 | **[Release area](releases/README.md)** | Firmware availability and how to identify the correct download. |
-| **[Feedback](https://github.com/Tubbritt/S56K-Personal-Edition/issues)** | Share your sampler, settings and observations. |
+| **[Feedback](https://github.com/Tubbritt/S56K-Expanded-Edition/issues)** | Share your sampler, settings and observations. |
 
 ### Before installing
 

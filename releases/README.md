@@ -12,7 +12,7 @@ Automatic instrument sampling, velocity layers, optional loop preparation and a 
 
 ## Download contents
 
-When the firmware is published, its clearly named attachment will appear under [GitHub Releases](https://github.com/Tubbritt/S56K-Personal-Edition/releases), accompanied by:
+When the firmware is published, its clearly named attachment will appear under [GitHub Releases](https://github.com/Tubbritt/S56K-Expanded-Edition/releases), accompanied by:
 
 | Item | Purpose |
 | --- | --- |
@@ -26,6 +26,6 @@ Read the [installation guide](../docs/INSTALLATION.md), [compatibility notes](..
 
 ## About this repository
 
-This is the documentation and release home for S56K Expanded Edition. Firmware development source, build tools and reverse-engineering material are not hosted here. The repository address retains its original name, **S56K-Personal-Edition**; the product name is **S56K Expanded Edition**.
+This is the documentation and release home for [S56K Expanded Edition](https://github.com/Tubbritt/S56K-Expanded-Edition). Firmware development source, build tools and reverse-engineering material are not hosted here.
 
 GitHub's automatic **“Source code” ZIP/TAR** links contain only this documentation repository. They are not sampler firmware. Use only a separately published, clearly identified firmware attachment and its matching checksum.
