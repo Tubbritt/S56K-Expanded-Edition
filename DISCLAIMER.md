@@ -20,7 +20,7 @@ To the maximum extent permitted by applicable law, the firmware, updater softwar
 
 ## Limitation of liability
 
-To the maximum extent permitted by applicable law, the project owner, authors, maintainers, contributors and distributors will not be liable for any loss or damage arising from downloading, loading, installing, using or being unable to use the firmware, updater software or related materials. This includes damage to or loss of use of equipment; loss or corruption of programs, samples or other data; repair, replacement or recovery costs; loss of income or business; and direct, indirect, incidental, special or consequential loss, whether the claim arises in contract, tort or otherwise, even if the possibility of such loss was known.
+To the maximum extent permitted by applicable law, the project owner will not be liable for any loss or damage arising from downloading, loading, installing, using or being unable to use the firmware, updater software or related materials. This includes damage to or loss of use of equipment; loss or corruption of programs, samples or other data; repair, replacement or recovery costs; loss of income or business; and direct, indirect, incidental, special or consequential loss, whether the claim arises in contract, tort or otherwise, even if the possibility of such loss was known.
 
 **Nothing in this notice excludes or limits liability that cannot lawfully be excluded or limited, or affects rights that cannot be waived under applicable law.** Where a limitation is not permitted, it applies only to the extent the law allows.
 

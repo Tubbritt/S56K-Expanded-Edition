@@ -66,4 +66,4 @@ new firmware or a new updater build. Those edits are recorded in the
 [documentation history](https://github.com/Tubbritt/S56K-Expanded-Edition/commits/main/).
 Use the file's checksum to identify the exact build.
 
-For maintainers: [Preparing the next release](docs/RELEASE-PROCESS.md).
+For the project owner: [Preparing the next release](docs/RELEASE-PROCESS.md).

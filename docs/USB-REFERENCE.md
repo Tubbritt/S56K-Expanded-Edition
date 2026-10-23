@@ -51,7 +51,7 @@ To check a download in PowerShell, run `Get-FileHash .\S56K-EX.bin -Algorithm SH
 | **BIN rejected** | Download the exact supported BIN and check its SHA-256. Do not use an older test build, ZIP file or GitHub “Source code” archive. |
 | **Install disabled after a completed update** | This is intentional. Close and reopen the app for a new session. |
 
-**If an update fails after erasure may have started:** leave the sampler powered on initially, save the report and note its display. The OS in flash may be incomplete. Do not repeatedly retry or assume a power-cycle will fix it. Share the error with the project maintainer before further attempts; recovery may require the established floppy procedure. The updater cannot repair a sampler whose application cannot start USB services, and preserving the boot block does not guarantee recovery.
+**If an update fails after erasure may have started:** leave the sampler powered on initially, save the report and note its display. The OS in flash may be incomplete. Do not repeatedly retry or assume a power-cycle will fix it. Share the error with the project owner before further attempts; recovery may require the established floppy procedure. The updater cannot repair a sampler whose application cannot start USB services, and preserving the boot block does not guarantee recovery.
 
 Use **Save report** to export the session. The app also attempts to save logs under `%LOCALAPPDATA%\S56K\FirmwareUpdater\Logs`. Reports contain device identifiers, file paths, firmware hashes and status; review them for personal paths before posting publicly. Nothing is uploaded automatically.
 

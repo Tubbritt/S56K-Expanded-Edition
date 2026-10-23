@@ -6,7 +6,7 @@ S56K Expanded Edition and the S56K Firmware Updater are supplied free of charge.
 
 ## What this licence covers
 
-These terms apply only to the original software, firmware additions, documentation and artwork that Tubbritt and the project's contributors have the right to license. They do not replace the terms of Akai's original firmware or any other third-party material. Each contributor retains their applicable rights.
+These terms apply only to the original software, firmware additions, documentation and artwork that the project owner has the right to license. They do not replace the terms of Akai's original firmware or any other third-party material.
 
 ## Permission to use and share
 
@@ -15,7 +15,7 @@ For the material covered by this licence, you may:
 - Download, install and use the supplied releases without a licence fee, for personal or professional purposes, including commercial music production and studio work.
 - Make backup copies and redistribute unchanged copies of the releases and their accompanying documentation and artwork.
 
-When redistributing, retain the release identification, copyright and attribution notices, this licence, the [third-party notices](THIRD-PARTY-NOTICES.md) and the [disclaimer](DISCLAIMER.md). Keep the supplied files unchanged and do not present your copy as an official Akai product or imply endorsement by this project's authors. A link to the original release is encouraged so recipients can find checksums, instructions and later updates.
+When redistributing, retain the release identification, copyright and attribution notices, this licence, the [third-party notices](THIRD-PARTY-NOTICES.md) and the [disclaimer](DISCLAIMER.md). Keep the supplied files unchanged and do not present your copy as an official Akai product or imply endorsement by the project owner. A link to the original release is encouraged so recipients can find checksums, instructions and later updates.
 
 This licence does not require attribution in music created using the software and grants the project no rights in your samples, programs or musical work.
 

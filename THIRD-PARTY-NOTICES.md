@@ -6,7 +6,7 @@
 
 S56K Expanded Edition is an independent modification of the original Akai S5000/S6000 operating system. The downloadable firmware BIN contains original Akai software as well as this project's additions. Rights in the original software remain with their respective owners; the project does not claim ownership of that material.
 
-The [S56K Freeware Licence](LICENSE.md) covers only rights that the project's authors can grant. This acknowledgement is not a grant of permission from Akai or another third-party rights holder, and does not establish permission to redistribute their software. The fact that a download is free does not change ownership of its underlying components.
+The [S56K Freeware Licence](LICENSE.md) covers only rights that the project owner can grant. This acknowledgement is not a grant of permission from Akai or another third-party rights holder, and does not establish permission to redistribute their software. The fact that a download is free does not change ownership of its underlying components.
 
 AKAI, AKAI Professional, S5000, S6000 and other product names identify compatible hardware or software and belong to their respective owners. This project is not affiliated with, endorsed by or supported by Akai Professional or its associated companies.
 
