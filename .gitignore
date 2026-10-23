@@ -1,5 +1,5 @@
-# Release documentation and artwork only. Approved firmware BINs and compiled
-# updater ZIPs belong in GitHub Release attachments, not the source tree.
+# Distribution repository: documentation, artwork and explicitly approved
+# compiled releases only. No firmware/app development source or build tools.
 *
 !*/
 !*.md
@@ -8,3 +8,7 @@
 !*.jpeg
 !*.pdf
 !.gitignore
+!/releases/firmware/v1/S56K-EX.bin
+!/releases/firmware/v1/SHA256SUMS.txt
+!/releases/updater/1.0-rc1/S56K-Firmware-Updater-1.0-RC1-win64.zip
+!/releases/updater/1.0-rc1/SHA256SUMS.txt

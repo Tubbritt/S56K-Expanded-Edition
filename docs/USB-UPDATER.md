@@ -4,9 +4,9 @@
 
 **S56K Firmware Updater** installs a supported OS directly from your Windows PC. It works independently of ak.Sys: connect the sampler, choose the BIN, then install. This writes the sampler's flash memory; it is not a temporary USB boot or a remote editor.
 
-**[Download Firmware Updater 1.0 RC1 for Windows x64](https://github.com/Tubbritt/S56K-Expanded-Edition/releases/download/updater-v1.0-rc1/S56K-Firmware-Updater-1.0-RC1-win64.zip)** · **[Download Expanded Edition v1 firmware](https://github.com/Tubbritt/S56K-Expanded-Edition/releases/download/expanded-v1/S56K-EX.bin)**
+**[Download Firmware Updater 1.0 RC1 for Windows x64](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/updater-v1.0-rc1/releases/updater/1.0-rc1/S56K-Firmware-Updater-1.0-RC1-win64.zip)** · **[Download Expanded Edition v1 firmware](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/expanded-v1/releases/firmware/v1/S56K-EX.bin)**
 
-The app and firmware are separate downloads. Extract the entire updater ZIP to a folder before opening `S56K-Firmware-Updater.exe`. GitHub's automatic “Source code” archives are documentation archives, not either download.
+The app and firmware are separate downloads. Extract the entire updater ZIP to a folder before opening `S56K-Firmware-Updater.exe`. Use the named BIN and updater ZIP links. GitHub's automatic “Source code” archives are whole-repository snapshots, not the individual files to select in the updater.
 
 ## What you need
 

@@ -10,8 +10,8 @@ Auto Sample uses the sampler's MIDI outputs and recording inputs. USB is not req
 
 | Download | Supported use |
 | --- | --- |
-| **[Expanded Edition v1 — S56K-EX.bin](https://github.com/Tubbritt/S56K-Expanded-Edition/releases/download/expanded-v1/S56K-EX.bin)** | Shared S5000/S6000 firmware; current EX artwork revision 2. Temporary floppy loading or permanent installation. |
-| **[Firmware Updater 1.0 RC1](https://github.com/Tubbritt/S56K-Expanded-Edition/releases/download/updater-v1.0-rc1/S56K-Firmware-Updater-1.0-RC1-win64.zip)** | Standalone Intel/AMD Windows x64 app; IB-S56USB card and WinUSB required. Permanent flash installation only. |
+| **[Expanded Edition v1 — S56K-EX.bin](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/expanded-v1/releases/firmware/v1/S56K-EX.bin)** | Shared S5000/S6000 firmware; current EX artwork revision 2. Temporary floppy loading or permanent installation. |
+| **[Firmware Updater 1.0 RC1](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/updater-v1.0-rc1/releases/updater/1.0-rc1/S56K-Firmware-Updater-1.0-RC1-win64.zip)** | Standalone Intel/AMD Windows x64 app; IB-S56USB card and WinUSB required. Permanent flash installation only. |
 
 Firmware SHA-256: `5b2559d3137f29516130572c754c5cf1be45058a25d70cff5fbbc221944e7f2a`.
 

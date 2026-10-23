@@ -16,6 +16,6 @@ Do not post private information or proprietary sample libraries. For an update f
 
 ## Repository contents
 
-Keep committed files to documentation, images and PDF guides. The ignore rules exclude executable files, firmware, archives and development code. Approved firmware BINs and compiled updater ZIPs are distributed through separate GitHub Releases with checksums and release notes. Do not commit app source, firmware source, research tools or executable payloads to the repository tree.
+Keep files to documentation, images, PDF guides and the explicitly approved compiled downloads in versioned `releases/firmware/` and `releases/updater/` folders. The ignore rules allow only the named release artifacts and their checksum files. GitHub Releases link to the tagged files with release notes. Do not commit app source, firmware source, research tools or unrelated executable payloads.
 
 Read the [flashing disclaimer](DISCLAIMER.md) and [compatibility notes](docs/COMPATIBILITY.md) before using a firmware image. Reporting a successful installation helps document that result; it does not establish safety on every device or for a different BIN.

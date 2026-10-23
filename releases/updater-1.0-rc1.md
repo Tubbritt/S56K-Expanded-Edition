@@ -8,7 +8,7 @@
 
 **23 October 2026 · Release candidate · Unsigned**
 
-**[Download Windows updater ZIP](https://github.com/Tubbritt/S56K-Expanded-Edition/releases/download/updater-v1.0-rc1/S56K-Firmware-Updater-1.0-RC1-win64.zip) · [SHA256SUMS.txt](https://github.com/Tubbritt/S56K-Expanded-Edition/releases/download/updater-v1.0-rc1/SHA256SUMS.txt) · [Driver setup and installation](../docs/USB-UPDATER.md)**
+**[Download Windows updater ZIP](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/updater-v1.0-rc1/releases/updater/1.0-rc1/S56K-Firmware-Updater-1.0-RC1-win64.zip) · [SHA256SUMS.txt](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/updater-v1.0-rc1/releases/updater/1.0-rc1/SHA256SUMS.txt) · [Driver setup and installation](../docs/USB-UPDATER.md)**
 
 ## What it does
 
@@ -28,7 +28,7 @@ RC1 accepts these two exact 1 MiB images:
 | Expanded Edition v1 / EX artwork revision 2 | `5b2559d3137f29516130572c754c5cf1be45058a25d70cff5fbbc221944e7f2a` |
 | Original Akai OS 2.14 | `05e466a7a19e5abde1e53660e0069bf2fb34bb33f705841185883a78b5369402` |
 
-Download the [Expanded BIN separately](https://github.com/Tubbritt/S56K-Expanded-Edition/releases/download/expanded-v1/S56K-EX.bin). The factory OS is not bundled in either release. Renaming an approved file is allowed; different revisions or modified files are rejected. The visible OS version remains 2.14 in both images.
+Download the [Expanded BIN separately](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/expanded-v1/releases/firmware/v1/S56K-EX.bin). The factory OS is not bundled in either release. Renaming an approved file is allowed; different revisions or modified files are rejected. The visible OS version remains 2.14 in both images.
 
 ## Verification
 

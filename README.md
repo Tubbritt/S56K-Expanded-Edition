@@ -14,7 +14,7 @@ Bring an external instrument into your S5000 or S6000 as a playable program. **A
 | --- | --- |
 | **Expanded Edition v1** | **Firmware Updater 1.0 RC1** |
 | One OS image for the S5000 and S6000. Install from floppy, or over USB with the updater. | A standalone Windows 11 x64 app. Connect, choose your BIN and install—ak.Sys is not required. |
-| **[Download S56K-EX.bin](https://github.com/Tubbritt/S56K-Expanded-Edition/releases/download/expanded-v1/S56K-EX.bin)** | **[Download Windows updater ZIP](https://github.com/Tubbritt/S56K-Expanded-Edition/releases/download/updater-v1.0-rc1/S56K-Firmware-Updater-1.0-RC1-win64.zip)** |
+| **[Download S56K-EX.bin](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/expanded-v1/releases/firmware/v1/S56K-EX.bin)** | **[Download Windows updater ZIP](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/updater-v1.0-rc1/releases/updater/1.0-rc1/S56K-Firmware-Updater-1.0-RC1-win64.zip)** |
 | [Firmware release notes](releases/v1.md) · [Installation](docs/INSTALLATION.md) | [Updater release notes](releases/updater-1.0-rc1.md) · [USB driver & app guide](docs/USB-UPDATER.md) |
 
 The USB updater needs an **IB-S56USB card** and Microsoft's **WinUSB** driver. A complete original-OS → Expanded round-trip has been confirmed on the S6000 test setup. See [compatibility](docs/COMPATIBILITY.md) for the scope of testing and [downloads](releases/README.md) for checksums. Read the [flashing disclaimer](DISCLAIMER.md) before installing.

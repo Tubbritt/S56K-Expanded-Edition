@@ -4,7 +4,7 @@
 
 The firmware image is **S56K-EX.bin**, shared by the AKAI S5000 and S6000. The boot screen selects the correct model graphic automatically and displays **EXPANDED EDITION v1**. The underlying AKAI operating-system identity remains **2.14**.
 
-**[Download Expanded Edition v1 — S56K-EX.bin](https://github.com/Tubbritt/S56K-Expanded-Edition/releases/download/expanded-v1/S56K-EX.bin)** · **[Download Windows USB updater](https://github.com/Tubbritt/S56K-Expanded-Edition/releases/download/updater-v1.0-rc1/S56K-Firmware-Updater-1.0-RC1-win64.zip)**
+**[Download Expanded Edition v1 — S56K-EX.bin](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/expanded-v1/releases/firmware/v1/S56K-EX.bin)** · **[Download Windows USB updater](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/updater-v1.0-rc1/releases/updater/1.0-rc1/S56K-Firmware-Updater-1.0-RC1-win64.zip)**
 
 | Route | What it does | What you need |
 | --- | --- | --- |
@@ -18,7 +18,7 @@ Read the [flashing disclaimer](../DISCLAIMER.md) before proceeding. Permanent in
 
 ## Before you begin
 
-- Download the named firmware attachment and its checksum from the [release area](../releases/README.md). GitHub's automatic “Source code” archives contain documentation, not the OS.
+- Download the named firmware BIN and its checksum from the [release area](../releases/README.md). Use the named BIN download, not GitHub's automatic “Source code” archive of the entire repository.
 - Back up your programs and samples to separate storage, and note customised settings. Flash installation can replace stored settings.
 - Keep a known-working OS file and readable recovery disk. These do not guarantee recovery after a failed flash.
 - Verify the BIN's SHA-256 checksum. The current **1,048,576-byte** image is:
