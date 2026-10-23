@@ -8,4 +8,6 @@ The white feature panels place native screens beside concise explanations. Sourc
 
 The updater icon in **artwork/updater-icon.png** is the same icon shipped with the tested S56K Firmware Updater 1.0 RC1. It identifies the Windows companion app.
 
+**artwork/social-preview.jpg** is the GitHub link-preview card: **1280 × 640 pixels**, **209,121 bytes**, with the title, feature copy and sampler faces inside the supplied template's safe border. It adapts the approved studio artwork using image generation, then uses a fixed-size export with white padding. To apply it, open repository **Settings → Social preview → Edit → Upload an image** and select this JPEG. Committing the image to this folder does not change that separate GitHub setting.
+
 The **updater/** folder contains three illustrated adaptations of the user's Windows screenshots: Ready to install, the confirmation dialog and the completed-transfer panel. Image editing was used to produce legible guide artwork from the supplied inline images. They are not untouched screen captures or independent hardware-test evidence. Firmware hashes are published as text in the release/checksum files; use those values for verification.
