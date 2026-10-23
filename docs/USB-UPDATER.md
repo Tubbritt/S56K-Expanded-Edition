@@ -1,108 +1,43 @@
-# USB firmware updates on Windows
+# Update your sampler from Windows
 
-[Home](../README.md) · [Downloads](../releases/README.md) · [Floppy installation](INSTALLATION.md) · [Compatibility](COMPATIBILITY.md) · [Disclaimer](../DISCLAIMER.md)
+[Home](../README.md) · [Download updater](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/updater-v1.0-rc1/releases/updater/1.0-rc1/S56K-Firmware-Updater-1.0-RC1-win64.zip) · [Download S56K-EX.bin](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/expanded-v1/releases/firmware/v1/S56K-EX.bin) · [Troubleshooting](USB-REFERENCE.md#troubleshooting)
 
-**S56K Firmware Updater** installs a supported OS directly from your Windows PC. It works independently of ak.Sys: connect the sampler, choose the BIN, then install. This writes the sampler's flash memory; it is not a temporary USB boot or a remote editor.
+**Windows 11 x64 · S5000/S6000 with an IB-S56USB card · Microsoft WinUSB.** Extract the updater ZIP, then open `S56K-Firmware-Updater.exe`. Firmware is a separate download. This is an unsigned **1.0 RC1** app; see [compatibility](COMPATIBILITY.md) for test coverage.
 
-**[Download Firmware Updater 1.0 RC1 for Windows x64](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/updater-v1.0-rc1/releases/updater/1.0-rc1/S56K-Firmware-Updater-1.0-RC1-win64.zip)** · **[Download Expanded Edition v1 firmware](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/expanded-v1/releases/firmware/v1/S56K-EX.bin)**
+## Driver setup · once only
 
-The app and firmware are separate downloads. Extract the entire updater ZIP to a folder before opening `S56K-Firmware-Updater.exe`. Use the named BIN and updater ZIP links. GitHub's automatic “Source code” archives are whole-repository snapshots, not the individual files to select in the updater.
+**Already connects? Skip ahead.** Otherwise, find the Akai device in Device Manager and choose:
 
-## What you need
+**Update driver → Browse my computer → Let me pick → Universal Serial Bus devices → WinUsb Device → Next.**
 
-| Item | Requirement |
-| --- | --- |
-| **Computer** | Intel/AMD 64-bit Windows 11. The reported hardware test used Windows 11 Pro 25H2. Windows on ARM and other Windows versions have not been verified. |
-| **Sampler** | AKAI S5000 or S6000 fitted with the **IB-S56USB expansion card**, running an OS that can communicate over USB. |
-| **Driver** | Microsoft's **WinUSB** associated with the Akai USB device. The old 32-bit Akai driver is not used by this app. |
-| **Firmware** | One of the two exact BIN images accepted by this release; see [Supported files](#supported-files). |
+Check you selected the Akai device (`USB\VID_09E8&PID_005E`). Reconnect USB, then click **Refresh → Connect**. If WinUsb Device is unavailable or no interface is found, see the [optional driver fallback](USB-REFERENCE.md#driver-fallback-winusb-unavailable-or-no-registered-interface).
 
-The owner reported a successful **Expanded → original Akai v2.14 → Expanded** USB round-trip on the established S6000 test setup, including the supplied reboot-verification procedure. S5000 USB flashing has not been separately confirmed. The app remains labelled **1.0 RC1** and is unsigned. Windows may show an unknown-publisher or SmartScreen warning; check the download source and checksum rather than disabling Windows security.
+## 1. Connect and choose your BIN
 
-The unchanged RC1 ZIP contains its original pre-test `START_HERE.html`. This online guide and the [compatibility page](COMPATIBILITY.md) include the subsequent hardware result.
+Select the sampler and click **Connect**, then **Choose BIN…** and select `S56K-EX.bin`. Look for **Connected**, **Exact SHA-256 match** and **Ready to install**.
 
-## 1. Set up the USB driver
+![Illustrated app screen: connected S6000 with S56K-EX.bin validated and Ready to install](../assets/updater/ready-to-install.png)
 
-**Already connects? Skip this section.** Keep your working driver and continue to [Prepare the sampler](#2-prepare-the-sampler). The updater uses the same Microsoft WinUSB driver as S56K USB Connection Check.
+*Illustrations adapted from the supplied Windows screenshots.*
 
-### Start with Device Manager
+## 2. Confirm the installation
 
-This is the original, simpler setup method. No extra driver utility is needed if Windows offers **WinUsb Device** and the app connects afterwards.
+Save your programs, samples and settings first. Start with a freshly booted sampler and no loaded libraries. Close ak.Sys and other USB tools. Read the [flashing disclaimer](../DISCLAIMER.md).
 
-1. Power on the sampler, connect USB and close ak.Sys or any other sampler USB tools.
-2. Open **Device Manager** and find the Akai sampler, usually under **Other devices** or USB devices. Check **Properties → Details → Hardware Ids** contains **`USB\VID_09E8&PID_005E`** so you change the correct device.
-3. Right-click that device and choose **Update driver → Browse my computer for drivers → Let me pick from a list of available drivers on my computer**.
-4. Choose **Universal Serial Bus devices → WinUsb Device**, if offered, then click **Next** to install it.
-5. Disconnect and reconnect USB, open the updater and click **Refresh → Connect**.
+Click **Install firmware**, check the sampler and firmware shown, then choose **Yes** when ready.
 
-**If it connects, driver setup is complete.** Connect reads the sampler's identity and display without flashing the OS.
+<img src="../assets/updater/confirm-installation.png" alt="Illustrated confirmation dialog showing the selected S6000 and firmware" width="560">
 
-### Only if WinUsb Device is missing or the connection reports no usable interface
+**This writes flash and stored settings. Keep power and USB connected until it finishes. There is no safe cancellation after erasure starts.**
 
-Some Windows configurations need an additional interface registration. Use this fallback only when the Device Manager method is unavailable or leaves the app reporting no registered interface.
+## 3. Finish, restart and check
 
-1. Download **Zadig** from **[zadig.akeo.ie](https://zadig.akeo.ie/)** and run it. Driver installation normally requires administrator approval.
-2. Choose **Options → List All Devices**, select the Akai sampler and confirm **USB ID `09E8 005E`**. Do not select a keyboard, mouse, hub or another device.
-3. Choose **WinUSB** as the target driver and click **Install Driver** or **Replace Driver**. Do not choose libusb-win32 or libusbK for this app.
-4. Close Zadig, reconnect USB and try **Refresh → Connect** again in the updater.
+Wait for **Transfer complete — sampler reported success**. Save the report.
 
-Both methods assign Microsoft's WinUSB to the sampler; Zadig is an optional setup helper, not a new driver requirement. See [Microsoft's WinUSB installation documentation](https://learn.microsoft.com/en-us/windows-hardware/drivers/usbcon/winusb-installation) for interface-registration details.
+![Illustrated completion panel showing all 63 blocks accepted and transfer complete at 100 percent](../assets/updater/transfer-complete.png)
 
-**What this changes:** the Windows driver association, not the sampler's firmware. The updater itself does not install drivers or edit their registry settings. You do not need to disable driver-signature enforcement. Assigning WinUSB does not make unmodified ak.Sys work; ak.Sys requires its separate compatibility setup and may stop recognising a device previously using its legacy driver. This updater needs neither ak.Sys nor its shim.
+When the sampler is idle, **remove any firmware floppy and restart it**. Check the EX boot artwork and **Program Tools → Auto Sample**. The ordinary version field still reads 2.14.
 
-## 2. Prepare the sampler
+Close and reopen the app before another update. If an update reports an error after erasure starts, leave the sampler powered on initially and [follow the failure guidance](USB-REFERENCE.md#troubleshooting).
 
-- Save programs and samples to disk. Back up or note customised settings: the update writes the OS **and stored settings**.
-- Start with a fresh sampler boot and do not load sample libraries. Confirm it is operating normally.
-- Keep a known-working OS and readable recovery floppy available. Recovery after a failed update is not guaranteed.
-- Use stable power and a reliable USB connection, preferably directly to the PC. Keep the PC awake and a laptop connected to power; close other sampler USB applications.
-- Read the [flashing disclaimer](../DISCLAIMER.md) before proceeding. There is no safe cancellation once erasure starts.
-
-## 3. Choose the firmware and install
-
-1. Open **S56K Firmware Updater**, select your sampler and click **Connect**. Check the detected model.
-2. Click **Choose BIN…** and select `S56K-EX.bin`. The app checks the entire file and only accepts the exact supported builds. It keeps a fixed copy in memory for the update.
-3. Review the selected firmware, file and checksum. Click **Install firmware**, then review the confirmation. The default answer is **No**; confirming starts a permanent flash update.
-4. Wait through the erase, transfer and programming stages. **Do not switch off, unplug USB, restart the computer or force-close the app.** The updater blocks its own Close action during installation and asks Windows to stay awake, but cannot prevent every interruption.
-5. Wait for **“Transfer complete — sampler reported success.”** Save the report. The app does not restart the sampler automatically.
-6. Once the update is complete and the sampler is idle, **remove any firmware floppy**, then restart the sampler. A floppy-loaded OS could otherwise hide which OS is actually in flash.
-7. Confirm the model-specific **S5000 EX / S6000 EX** artwork and **EXPANDED EDITION v1** caption. Create an empty test program, open **Program Tools → Auto Sample**, and check normal operation.
-
-The official version field remains **2.14** in both factory and Expanded firmware; it cannot distinguish them. Use the artwork and Auto Sample menu after booting without an OS floppy.
-
-The app permits one update per session. **Close and reopen it before another installation**, then reconnect. A completed transfer means the sampler acknowledged the update; your reboot and operating checks confirm the result on the machine.
-
-## Supported files
-
-Both firmware files are **1,048,576 bytes**. Renaming a recognised file is fine; editing it or using a different revision causes rejection. The published Expanded BIN is the same tested image, with EX artwork revision 2.
-
-| Firmware | SHA-256 |
-| --- | --- |
-| **Expanded Edition v1 — `S56K-EX.bin`** | `5b2559d3137f29516130572c754c5cf1be45058a25d70cff5fbbc221944e7f2a` |
-| **Original Akai v2.14 — `s56v214.bin`** | `05e466a7a19e5abde1e53660e0069bf2fb34bb33f705841185883a78b5369402` |
-
-The factory BIN is recognised for restoration but is not included in these downloads. Retain your original Akai image if you need that option. Other firmware revisions require an updater that explicitly supports them; do not bypass the file checks.
-
-To check a download in PowerShell, run `Get-FileHash .\S56K-EX.bin -Algorithm SHA256` and compare the result with the table or the release's `SHA256SUMS.txt`. The updater ZIP's SHA-256 is:
-
-`bcb49f0354e3a9b5eaf043ed17b8a346bb5acf6a35193d3ec9cef33f0566375c`
-
-**Updating from factory OS:** the running sampler OS performs the flash write. Factory v2.14 has weaker memory-allocation and final-byte verification checks than Expanded Edition. Selecting Expanded on the PC cannot apply those fixes before the new OS is running. The successful stock-to-Expanded hardware test establishes that route works on the tested setup; it does not remove those older checks' limitations. Always start with a freshly booted, unloaded sampler.
-
-## Troubleshooting
-
-| What you see | What to do |
-| --- | --- |
-| **No sampler listed** | Check power, the IB-S56USB card, USB cable and direct PC port. Confirm the Akai hardware IDs in Device Manager, then click Refresh. |
-| **Driver missing / WinUSB not assigned** | Complete the driver procedure above for `09E8:005E` only. |
-| **No usable interface registered** | Use Zadig to install a device-specific WinUSB association, reconnect USB and refresh. |
-| **Cannot open / access denied / connection busy** | Close ak.Sys and other sampler USB tools. Reconnect USB and try Connect again before installation. |
-| **Timeout during Connect** | Save the report. Check cable and power; close competing tools. If needed, save sampler work and restart it before trying again. This advice applies before an update, not during flash writing. |
-| **BIN rejected** | Download the exact supported BIN and check its SHA-256. Do not use an older test build, ZIP file or GitHub “Source code” archive. |
-| **Install disabled after a completed update** | This is intentional. Close and reopen the app for a new session. |
-
-**If an update fails after erasure may have started:** leave the sampler powered on initially, save the report and note its display. The OS in flash may be incomplete. Do not repeatedly retry or assume a power-cycle will fix it. Share the error with the project maintainer before further attempts; recovery may require the established floppy procedure. The updater cannot repair a sampler whose application cannot start USB services, and preserving the boot block does not guarantee recovery.
-
-Use **Save report** to export the session. The app also attempts to save logs under `%LOCALAPPDATA%\S56K\FirmwareUpdater\Logs`. Reports contain device identifiers, file paths, firmware hashes and status; review them for personal paths before posting publicly. Nothing is uploaded automatically.
-
-[Download releases](../releases/README.md) · [Full compatibility notes](COMPATIBILITY.md) · [Report an issue](https://github.com/Tubbritt/S56K-Expanded-Edition/issues)
+[Checksums & supported files](USB-REFERENCE.md#supported-files) · [Troubleshooting](USB-REFERENCE.md#troubleshooting) · [Compatibility and test status](COMPATIBILITY.md)

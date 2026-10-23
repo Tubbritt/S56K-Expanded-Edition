@@ -2,7 +2,9 @@
 
 [Home](../README.md) · [Downloads](README.md) · [Windows USB guide](../docs/USB-UPDATER.md) · [Compatibility](../docs/COMPATIBILITY.md)
 
-![S56K Firmware Updater icon](../assets/artwork/updater-icon.png)
+![Illustrated updater ready to install S56K-EX.bin](../assets/updater/ready-to-install.png)
+
+*Illustrated adaptation of the supplied Windows screenshot. [Follow the three-step visual guide →](../docs/USB-UPDATER.md)*
 
 **Install your sampler OS from Windows 11.** A standalone x64 USB updater for the AKAI S5000 and S6000 fitted with an IB-S56USB card. No ak.Sys installation or separate runtime is required.
 

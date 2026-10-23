@@ -7,3 +7,5 @@ The **screens/** folder contains native firmware renders. They preserve the orig
 The white feature panels place native screens beside concise explanations. Source graphics, typography, layout work and render tooling are maintained outside this documentation repository. No firmware source, app source or image-generation scripts are stored in the repository tree. Approved compiled firmware and updater downloads are stored in versioned release folders and linked from GitHub Releases.
 
 The updater icon in **artwork/updater-icon.png** is the same icon shipped with the tested S56K Firmware Updater 1.0 RC1. It identifies the Windows companion app.
+
+The **updater/** folder contains three illustrated adaptations of the user's Windows screenshots: Ready to install, the confirmation dialog and the completed-transfer panel. Image editing was used to produce legible guide artwork from the supplied inline images. They are not untouched screen captures or independent hardware-test evidence. Firmware hashes are published as text in the release/checksum files; use those values for verification.

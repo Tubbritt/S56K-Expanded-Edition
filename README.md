@@ -68,13 +68,15 @@ One firmware image selects the right artwork for your sampler. The separate **Op
 
 ### Update from your Windows PC
 
-<img src="assets/artwork/updater-icon.png" alt="S56K Firmware Updater icon: a chip with an update arrow" width="96" height="96">
+![Illustrated Windows updater screen adapted from the supplied screenshot](assets/updater/ready-to-install.png)
+
+*Illustrated app screen, adapted from the supplied Windows screenshot.*
 
 **Connect → Choose BIN → Install.** The standalone updater checks the connected sampler and exact firmware file before installation, shows progress and saves local reports. It supports the released Expanded image and the original Akai v2.14 image.
 
 If Windows cannot find the sampler, the illustrated project manual and [USB guide](docs/USB-UPDATER.md) walk through identifying the Akai device, assigning WinUSB and checking the connection. USB installation writes flash; temporary loading remains available through floppy.
 
-**[Set up USB and install →](docs/USB-UPDATER.md)**
+**[Follow the illustrated USB walkthrough →](docs/USB-UPDATER.md)**
 
 ### Everything you need to get started
 
