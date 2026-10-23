@@ -6,7 +6,7 @@
 
 Bring an external instrument into your S5000 or S6000 as a playable program. **Auto Sample** records a range of notes and velocity layers, names the samples and maps them for you. **Auto Loop** prepares the sustain with optional Akai Auto Find, crossfade and cropping. You stay in control of the sound—and when it is saved.
 
-**[Downloads](releases/README.md) · [Get started](docs/QUICK-START.md) · [User guide](docs/USER-GUIDE.md) · [PDF manual](docs/S56K-Expanded-Edition-User-Guide.pdf) · [USB setup](docs/USB-UPDATER.md)**
+**[Downloads](releases/README.md) · [What's new](CHANGELOG.md) · [Get started](docs/QUICK-START.md) · [User guide](docs/USER-GUIDE.md) · [PDF manual](docs/S56K-Expanded-Edition-User-Guide.pdf) · [USB setup](docs/USB-UPDATER.md)**
 
 ### Download your upgrade
 
@@ -89,6 +89,7 @@ If Windows cannot find the sampler, the illustrated project manual and [USB guid
 | **[Version 1 release notes](releases/v1.md)** | Features, behavior and practical limits. |
 | **[Compatibility](docs/COMPATIBILITY.md)** | Model support and the available software/hardware verification evidence. |
 | **[Release area](releases/README.md)** | Firmware and Windows app downloads, release notes and checksums. |
+| **[Release history](CHANGELOG.md)** | What each firmware and updater version adds, changes or fixes. |
 | **[Feedback](https://github.com/Tubbritt/S56K-Expanded-Edition/issues)** | Share your sampler, settings and observations. |
 
 ### Before installing
@@ -99,4 +100,6 @@ If Windows cannot find the sampler, the illustrated project manual and [USB guid
 
 S56K Expanded Edition is an independent project, not an official AKAI release or an AKAI-endorsed product. AKAI and other product names belong to their respective owners.
 
-This repository hosts documentation, artwork and release information. Firmware development source is not hosted here.
+**Free to use, including in professional studios and commercial music production.** The [Freeware Licence](LICENSE.md) permits use and unchanged sharing of the material covered by it. Read the [third-party acknowledgements](THIRD-PARTY-NOTICES.md) for the original Akai firmware and Windows runtime components; their respective rights remain with their owners.
+
+This is a closed-source project. The project's own firmware and application source code is private, is not included in the downloads, and will not be published. This repository distributes compiled releases, documentation and artwork.

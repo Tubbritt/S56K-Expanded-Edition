@@ -1,6 +1,6 @@
 # Firmware & updater use disclaimer
 
-[Home](README.md) · [Installation guide](docs/INSTALLATION.md) · [Compatibility](docs/COMPATIBILITY.md)
+[Home](README.md) · [Installation guide](docs/INSTALLATION.md) · [Compatibility](docs/COMPATIBILITY.md) · [Freeware licence](LICENSE.md) · [Third-party notices](THIRD-PARTY-NOTICES.md)
 
 **Installing or using S56K Expanded Edition or the S56K Firmware Updater is your choice and is undertaken at your own risk.** Read this notice and the instructions supplied with the specific firmware and updater releases before loading or installing them.
 

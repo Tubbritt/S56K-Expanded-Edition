@@ -1,6 +1,6 @@
 # Downloads & releases
 
-[Home](../README.md) · [Installation](../docs/INSTALLATION.md) · [Windows USB guide](../docs/USB-UPDATER.md) · [Disclaimer](../DISCLAIMER.md)
+[Home](../README.md) · [Release history](../CHANGELOG.md) · [Installation](../docs/INSTALLATION.md) · [Windows USB guide](../docs/USB-UPDATER.md) · [Freeware licence](../LICENSE.md) · [Disclaimer](../DISCLAIMER.md)
 
 ## Choose your download
 
@@ -49,8 +49,12 @@ Letter case does not matter when comparing hashes. Stop if any character differs
 
 ## About this repository
 
+The [release history](../CHANGELOG.md) tracks the firmware and updater separately, with features, dates and links to each version's detailed notes. Previous versions remain identifiable by their tags and checksums. Documentation and licensing updates do not change the released binaries. See [Preparing the next release](../docs/RELEASE-PROCESS.md) for the publication checklist.
+
 This repository distributes compiled downloads, documentation and artwork. Firmware and app source code, build tools and reverse-engineering material are maintained elsewhere. Binary downloads live in versioned **releases/** folders and are linked from the corresponding GitHub Releases. Each release links to its tagged copy so later documentation edits do not change that download.
 
 GitHub automatically adds **“Source code” ZIP/TAR** links to releases. These are whole-repository snapshots containing documentation and compiled downloads; they do not contain firmware or app development source. Use the explicitly named BIN or updater ZIP above to get the correct file directly.
 
 Read the [installation guide](../docs/INSTALLATION.md), [compatibility notes](../docs/COMPATIBILITY.md) and [disclaimer](../DISCLAIMER.md) before installing.
+
+Use and unchanged sharing of the project's own material are covered by the [Freeware Licence](../LICENSE.md). Keep that licence, the [third-party notices](../THIRD-PARTY-NOTICES.md) and the disclaimer with redistributed copies. Original Akai software and other third-party components retain their own rights and terms. The project's own firmware and app source code will not be published or included in releases.

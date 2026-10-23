@@ -1,6 +1,6 @@
 # S56K Firmware Updater 1.0 RC1
 
-[Home](../README.md) · [Downloads](README.md) · [Windows USB guide](../docs/USB-UPDATER.md) · [Compatibility](../docs/COMPATIBILITY.md)
+[Home](../README.md) · [Downloads](README.md) · [Release history](../CHANGELOG.md) · [Windows USB guide](../docs/USB-UPDATER.md) · [Compatibility](../docs/COMPATIBILITY.md)
 
 ![Illustrated updater ready to install S56K-EX.bin](../assets/updater/ready-to-install.png)
 
@@ -67,3 +67,5 @@ The ZIP includes the app, its original setup HTML, icon assets and internal chec
 - If an update fails after erasure may have started, leave the sampler powered on initially and save the report before attempting recovery.
 
 Read the [full driver and updater guide](../docs/USB-UPDATER.md) and [disclaimer](../DISCLAIMER.md) before use.
+
+The updater is free for personal and professional use under the [Freeware Licence](../LICENSE.md). Include that licence, the [third-party runtime notices](../THIRD-PARTY-NOTICES.md) and disclaimer when sharing unchanged copies. The project's own application source is private and will not be published. These accompanying notices do not change the tested ZIP or executable.

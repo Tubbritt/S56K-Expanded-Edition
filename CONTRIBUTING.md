@@ -1,6 +1,6 @@
 # Feedback & documentation
 
-S56K Expanded Edition's repository is home to firmware and updater downloads, release information, user guides and visual assets. Firmware and app development source, build tools, disassembly and research material are maintained separately.
+S56K Expanded Edition's repository is home to firmware and updater downloads, release information, user guides and visual assets. Firmware and app development source, build tools, disassembly and research material are maintained privately. The project's own source code will not be published or included in releases.
 
 ## Report an issue
 
@@ -19,3 +19,5 @@ Do not post private information or proprietary sample libraries. For an update f
 Keep files to documentation, images, PDF guides and the explicitly approved compiled downloads in versioned `releases/firmware/` and `releases/updater/` folders. The ignore rules allow only the named release artifacts and their checksum files. GitHub Releases link to the tagged files with release notes. Do not commit app source, firmware source, research tools or unrelated executable payloads.
 
 Read the [flashing disclaimer](DISCLAIMER.md) and [compatibility notes](docs/COMPATIBILITY.md) before using a firmware image. Reporting a successful installation helps document that result; it does not establish safety on every device or for a different BIN.
+
+For a new release, follow [Preparing the next release](docs/RELEASE-PROCESS.md) and update the [release history](CHANGELOG.md). The [Freeware Licence](LICENSE.md) and [third-party notices](THIRD-PARTY-NOTICES.md) describe the permissions and notices accompanying the downloads.
