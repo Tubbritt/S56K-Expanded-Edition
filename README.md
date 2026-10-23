@@ -99,4 +99,4 @@ If Windows cannot find the sampler, the illustrated project manual and [USB guid
 
 S56K Expanded Edition is an independent project, not an official AKAI release or an AKAI-endorsed product. AKAI and other product names belong to their respective owners.
 
-The studio banner is presentation artwork adapted from the supplied image. The separate menu and boot images are native firmware renders with example settings; neither is presented as a record of hardware testing. This repository hosts documentation, artwork and release information. Firmware development source is not hosted here.
+This repository hosts documentation, artwork and release information. Firmware development source is not hosted here.
