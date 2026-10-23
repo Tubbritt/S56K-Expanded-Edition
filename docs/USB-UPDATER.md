@@ -23,19 +23,30 @@ The unchanged RC1 ZIP contains its original pre-test `START_HERE.html`. This onl
 
 ## 1. Set up the USB driver
 
-If the updater already connects successfully, keep your working driver and continue to [Prepare the sampler](#2-prepare-the-sampler).
+**Already connects? Skip this section.** Keep your working driver and continue to [Prepare the sampler](#2-prepare-the-sampler). The updater uses the same Microsoft WinUSB driver as S56K USB Connection Check.
 
-1. Power on the sampler and connect its USB expansion to your PC with a reliable USB cable. Close ak.Sys, S56K USB Connection Check and any other sampler USB tools.
-2. Open **Device Manager**. Find the Akai sampler, which may appear under **Other devices** if its driver is missing. Open **Properties → Details → Hardware Ids**.
-3. Confirm the device has **`USB\VID_09E8&PID_005E`**. These are the Akai USB identifiers. If they do not match, do not change that device's driver.
-4. Download **Zadig** from **[zadig.akeo.ie](https://zadig.akeo.ie/)** and run it. Driver installation normally requires administrator approval.
-5. In Zadig, select **Options → List All Devices**, then select the Akai sampler. Check that **USB ID is `09E8 005E`**. Never select your keyboard, mouse, USB hub or another unrelated device.
-6. In the target-driver box, choose **WinUSB**. Click **Install Driver** or **Replace Driver**, depending on what Zadig displays, and wait for completion. Do not choose libusb-win32 or libusbK for this app.
-7. Close Zadig. If needed, disconnect and reconnect the sampler's USB cable, then open the updater and click **Refresh**. Select the sampler and click **Connect**.
+### Start with Device Manager
 
-A successful connection reads the sampler's USB identity and current display. **Connect does not flash the OS.** No test flash is needed to check whether the driver works.
+This is the original, simpler setup method. No extra driver utility is needed if Windows offers **WinUsb Device** and the app connects afterwards.
 
-Some Windows installations offer **Device Manager → Update driver → Browse my computer → Let me pick → Universal Serial Bus devices → WinUsb Device**. This is an alternative if available, but it may not register the interface the updater needs. If the device uses WinUSB yet the app reports no usable interface, use the device-specific Zadig procedure above. See [Microsoft's WinUSB installation documentation](https://learn.microsoft.com/en-us/windows-hardware/drivers/usbcon/winusb-installation) for background.
+1. Power on the sampler, connect USB and close ak.Sys or any other sampler USB tools.
+2. Open **Device Manager** and find the Akai sampler, usually under **Other devices** or USB devices. Check **Properties → Details → Hardware Ids** contains **`USB\VID_09E8&PID_005E`** so you change the correct device.
+3. Right-click that device and choose **Update driver → Browse my computer for drivers → Let me pick from a list of available drivers on my computer**.
+4. Choose **Universal Serial Bus devices → WinUsb Device**, if offered, then click **Next** to install it.
+5. Disconnect and reconnect USB, open the updater and click **Refresh → Connect**.
+
+**If it connects, driver setup is complete.** Connect reads the sampler's identity and display without flashing the OS.
+
+### Only if WinUsb Device is missing or the connection reports no usable interface
+
+Some Windows configurations need an additional interface registration. Use this fallback only when the Device Manager method is unavailable or leaves the app reporting no registered interface.
+
+1. Download **Zadig** from **[zadig.akeo.ie](https://zadig.akeo.ie/)** and run it. Driver installation normally requires administrator approval.
+2. Choose **Options → List All Devices**, select the Akai sampler and confirm **USB ID `09E8 005E`**. Do not select a keyboard, mouse, hub or another device.
+3. Choose **WinUSB** as the target driver and click **Install Driver** or **Replace Driver**. Do not choose libusb-win32 or libusbK for this app.
+4. Close Zadig, reconnect USB and try **Refresh → Connect** again in the updater.
+
+Both methods assign Microsoft's WinUSB to the sampler; Zadig is an optional setup helper, not a new driver requirement. See [Microsoft's WinUSB installation documentation](https://learn.microsoft.com/en-us/windows-hardware/drivers/usbcon/winusb-installation) for interface-registration details.
 
 **What this changes:** the Windows driver association, not the sampler's firmware. The updater itself does not install drivers or edit their registry settings. You do not need to disable driver-signature enforcement. Assigning WinUSB does not make unmodified ak.Sys work; ak.Sys requires its separate compatibility setup and may stop recognising a device previously using its legacy driver. This updater needs neither ak.Sys nor its shim.
 
