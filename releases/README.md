@@ -1,31 +1,56 @@
-# S56K Expanded Edition releases
+# Downloads & releases
 
-[Home](../README.md) · [Version 1 release notes](v1.md) · [Installation](../docs/INSTALLATION.md) · [Flashing disclaimer](../DISCLAIMER.md)
+[Home](../README.md) · [Installation](../docs/INSTALLATION.md) · [Windows USB guide](../docs/USB-UPDATER.md) · [Disclaimer](../DISCLAIMER.md)
 
-## Expanded Edition v1
+## Choose your download
 
-Automatic instrument sampling, velocity layers, optional loop preparation and a refreshed EX startup identity for the **AKAI S5000 and S6000**.
+The operating system runs on your sampler. The optional Windows app installs it over USB. Download both for USB installation, or just the BIN for floppy loading and installation.
 
-**[Read the v1 release notes →](v1.md)**
+| Release | Download | Instructions |
+| --- | --- | --- |
+| **Expanded Edition v1** · S5000 / S6000 | [S56K-EX.bin](https://github.com/Tubbritt/S56K-Expanded-Edition/releases/download/expanded-v1/S56K-EX.bin) · 1 MiB | [Release notes](v1.md) · [Install](../docs/INSTALLATION.md) |
+| **Firmware Updater 1.0 RC1** · Windows 11 x64 | [Windows ZIP](https://github.com/Tubbritt/S56K-Expanded-Edition/releases/download/updater-v1.0-rc1/S56K-Firmware-Updater-1.0-RC1-win64.zip) · 1,001,521 bytes | [Release notes](updater-1.0-rc1.md) · [Driver setup & use](../docs/USB-UPDATER.md) |
+| **Illustrated manual** | [PDF user guide](../docs/S56K-Expanded-Edition-User-Guide.pdf) | Sampling, looping, floppy installation and USB driver/update instructions |
 
-**Firmware download: not published.** The guides, feature descriptions and release notes are available here; no OS BIN or firmware archive is currently attached or stored in this repository.
+The updater is a release candidate and is unsigned. It has a user-confirmed physical round-trip on the established S6000 / Windows 11 Pro 25H2 setup. An IB-S56USB card and WinUSB driver are required; USB is not needed for the firmware's sampling features. See [compatibility](../docs/COMPATIBILITY.md).
 
-## Download contents
+## Check your download
 
-When the firmware is published, its clearly named attachment will appear under [GitHub Releases](https://github.com/Tubbritt/S56K-Expanded-Edition/releases), accompanied by:
+Each GitHub Release includes a **SHA256SUMS.txt** attachment. The primary files are identified by these SHA-256 values:
 
-| Item | Purpose |
-| --- | --- |
-| **S56K-EX.bin** | The shared S5000/S6000 operating-system image. |
-| **SHA-256 checksum** | Identifies the exact file and supports download and floppy read-back checks. |
-| **Release notes** | Features, changes and known limitations for that version. |
-| **Installation instructions** | The loading and update route applicable to the specific file. |
-| **Compatibility information** | Model and installation-method evidence for that exact version. |
+**S56K-EX.bin** — 1,048,576 bytes
 
-Read the [installation guide](../docs/INSTALLATION.md), [compatibility notes](../docs/COMPATIBILITY.md) and [flashing disclaimer](../DISCLAIMER.md) before deciding to install. A successful check or previous installation does not guarantee a risk-free update.
+```text
+5b2559d3137f29516130572c754c5cf1be45058a25d70cff5fbbc221944e7f2a
+```
+
+**S56K-Firmware-Updater-1.0-RC1-win64.zip** — 1,001,521 bytes
+
+```text
+bcb49f0354e3a9b5eaf043ed17b8a346bb5acf6a35193d3ec9cef33f0566375c
+```
+
+In PowerShell, change to the download folder and run:
+
+```powershell
+Get-FileHash .\S56K-EX.bin -Algorithm SHA256
+Get-FileHash .\S56K-Firmware-Updater-1.0-RC1-win64.zip -Algorithm SHA256
+```
+
+Letter case does not matter when comparing hashes. Stop if any character differs. A matching hash identifies the downloaded file; it is not a guarantee against an interrupted flash or a hardware fault.
+
+## What is included
+
+- The **firmware release** contains the shared OS BIN, PDF manual and checksums.
+- The **updater release** contains the unchanged tested Windows app ZIP, PDF manual and checksums. Extract the ZIP before running the app. Firmware is downloaded separately.
+- The tested ZIP's bundled `START_HERE.html` predates the successful hardware test. The [current USB guide](../docs/USB-UPDATER.md), PDF and release notes include the updated status.
+
+[All GitHub Releases →](https://github.com/Tubbritt/S56K-Expanded-Edition/releases)
 
 ## About this repository
 
-This is the documentation and release home for [S56K Expanded Edition](https://github.com/Tubbritt/S56K-Expanded-Edition). Firmware development source, build tools and reverse-engineering material are not hosted here.
+This repository distributes compiled downloads, documentation and artwork. Firmware and app source code, build tools and reverse-engineering material are maintained elsewhere. Binary downloads are **GitHub Release attachments**, not files committed to the repository tree.
 
-GitHub's automatic **“Source code” ZIP/TAR** links contain only this documentation repository. They are not sampler firmware. Use only a separately published, clearly identified firmware attachment and its matching checksum.
+GitHub automatically adds **“Source code” ZIP/TAR** links to releases. Those contain this documentation repository, not the sampler OS or Windows app. Use the explicitly named BIN or updater ZIP above.
+
+Read the [installation guide](../docs/INSTALLATION.md), [compatibility notes](../docs/COMPATIBILITY.md) and [disclaimer](../DISCLAIMER.md) before installing.

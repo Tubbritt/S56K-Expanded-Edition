@@ -1,5 +1,5 @@
-# Release documentation and artwork only. Approved BIN files belong in
-# GitHub Release attachments, never in this repository's source tree.
+# Release documentation and artwork only. Approved firmware BINs and compiled
+# updater ZIPs belong in GitHub Release attachments, not the source tree.
 *
 !*/
 !*.md

@@ -4,9 +4,11 @@
 
 **Version 1 · AKAI S5000 / S6000**
 
-[Home](../README.md) · [Quick start](QUICK-START.md) · [PDF manual](S56K-Expanded-Edition-User-Guide.pdf) · [Installation](INSTALLATION.md)
+[Home](../README.md) · [Quick start](QUICK-START.md) · [PDF manual](S56K-Expanded-Edition-User-Guide.pdf) · [Installation](INSTALLATION.md) · [Windows USB guide](USB-UPDATER.md)
 
 Read the [installation guide](INSTALLATION.md), [compatibility notes](COMPATIBILITY.md) and [risk disclaimer](../DISCLAIMER.md) before loading or installing firmware.
+
+The [release area](../releases/README.md) provides the firmware BIN and separate Windows updater. For Windows 11 driver setup and USB installation, follow the [USB driver and updater guide](USB-UPDATER.md). Auto Sample itself does not require a computer or USB card.
 
 Auto Sample sends MIDI notes to an external instrument, records its audio and assigns the recordings to the current program. You choose the pitches, velocity layers and recording behaviour. Optional Auto Loop processing prepares sustained samples after each recording.
 

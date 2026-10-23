@@ -4,4 +4,6 @@ The **artwork/** folder contains the landing-page panels. The studio hero is ada
 
 The **screens/** folder contains native firmware renders. They preserve the original **320 × 240** pixel grid and show the implemented interface. Example program names, settings and progress counts are display fixtures, not captured audio or physical-device test results. The boot images show the correct model-specific EX lettering and **EXPANDED EDITION v1** caption.
 
-The white feature panels place native screens beside concise explanations. Source graphics, typography, layout work and render tooling are maintained outside this documentation repository. No firmware, source code or image-generation scripts are stored here.
+The white feature panels place native screens beside concise explanations. Source graphics, typography, layout work and render tooling are maintained outside this documentation repository. No firmware, source code or image-generation scripts are stored in the repository tree. Compiled firmware and updater downloads are supplied separately as GitHub Release attachments.
+
+The updater icon in **artwork/updater-icon.png** is the same icon shipped with the tested S56K Firmware Updater 1.0 RC1. It identifies the Windows companion app.

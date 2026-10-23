@@ -6,10 +6,18 @@
 
 Bring an external instrument into your S5000 or S6000 as a playable program. **Auto Sample** records a range of notes and velocity layers, names the samples and maps them for you. **Auto Loop** prepares the sustain with optional Akai Auto Find, crossfade and cropping. You stay in control of the sound—and when it is saved.
 
-**[Get started](docs/QUICK-START.md) · [User guide](docs/USER-GUIDE.md) · [PDF manual](docs/S56K-Expanded-Edition-User-Guide.pdf) · [What's in v1](releases/v1.md) · [Installation](docs/INSTALLATION.md)**
+**[Downloads](releases/README.md) · [Get started](docs/QUICK-START.md) · [User guide](docs/USER-GUIDE.md) · [PDF manual](docs/S56K-Expanded-Edition-User-Guide.pdf) · [USB setup](docs/USB-UPDATER.md)**
 
-> **Version 1 documentation · Firmware download not published.**
-> This is the home for the manual, release information and artwork. See the [release area](releases/README.md) for download availability and [compatibility](docs/COMPATIBILITY.md) for verification details.
+### Download your upgrade
+
+| For your sampler | For your Windows PC |
+| --- | --- |
+| **Expanded Edition v1** | **Firmware Updater 1.0 RC1** |
+| One OS image for the S5000 and S6000. Install from floppy, or over USB with the updater. | A standalone Windows 11 x64 app. Connect, choose your BIN and install—ak.Sys is not required. |
+| **[Download S56K-EX.bin](https://github.com/Tubbritt/S56K-Expanded-Edition/releases/download/expanded-v1/S56K-EX.bin)** | **[Download Windows updater ZIP](https://github.com/Tubbritt/S56K-Expanded-Edition/releases/download/updater-v1.0-rc1/S56K-Firmware-Updater-1.0-RC1-win64.zip)** |
+| [Firmware release notes](releases/v1.md) · [Installation](docs/INSTALLATION.md) | [Updater release notes](releases/updater-1.0-rc1.md) · [USB driver & app guide](docs/USB-UPDATER.md) |
+
+The USB updater needs an **IB-S56USB card** and Microsoft's **WinUSB** driver. A complete original-OS → Expanded round-trip has been confirmed on the S6000 test setup. See [compatibility](docs/COMPATIBILITY.md) for the scope of testing and [downloads](releases/README.md) for checksums. Read the [flashing disclaimer](DISCLAIMER.md) before installing.
 
 ![Auto Sample: choose notes and velocities, record an external instrument and automatically map the results](assets/artwork/auto-sample.png)
 
@@ -58,16 +66,27 @@ One firmware image selects the right artwork for your sampler. The separate **Op
 
 **[View the screen gallery →](docs/SCREEN-GALLERY.md)**
 
+### Update from your Windows PC
+
+<img src="assets/artwork/updater-icon.png" alt="S56K Firmware Updater icon: a chip with an update arrow" width="96" height="96">
+
+**Connect → Choose BIN → Install.** The standalone updater checks the connected sampler and exact firmware file before installation, shows progress and saves local reports. It supports the released Expanded image and the original Akai v2.14 image.
+
+If Windows cannot find the sampler, the illustrated project manual and [USB guide](docs/USB-UPDATER.md) walk through identifying the Akai device, assigning WinUSB and checking the connection. USB installation writes flash; temporary loading remains available through floppy.
+
+**[Set up USB and install →](docs/USB-UPDATER.md)**
+
 ### Everything you need to get started
 
 | Guide | Start here for… |
 | --- | --- |
 | **[Quick start](docs/QUICK-START.md)** | Your first recording, from connecting cables to saving a program. |
 | **[Illustrated manual](docs/USER-GUIDE.md)** · **[PDF](docs/S56K-Expanded-Edition-User-Guide.pdf)** | Notes, layers, timing, loops and troubleshooting. |
-| **[Installation guide](docs/INSTALLATION.md)** | Temporary floppy loading and permanent flash installation. |
+| **[Installation guide](docs/INSTALLATION.md)** | Temporary floppy loading and permanent floppy or USB installation. |
+| **[Windows USB guide](docs/USB-UPDATER.md)** | Driver setup, the updater, verification and troubleshooting. |
 | **[Version 1 release notes](releases/v1.md)** | Features, behavior and practical limits. |
 | **[Compatibility](docs/COMPATIBILITY.md)** | Model support and the available software/hardware verification evidence. |
-| **[Release area](releases/README.md)** | Firmware availability and how to identify the correct download. |
+| **[Release area](releases/README.md)** | Firmware and Windows app downloads, release notes and checksums. |
 | **[Feedback](https://github.com/Tubbritt/S56K-Expanded-Edition/issues)** | Share your sampler, settings and observations. |
 
 ### Before installing
