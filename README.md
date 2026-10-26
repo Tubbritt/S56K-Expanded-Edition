@@ -8,6 +8,16 @@ Bring an external instrument into your S5000 or S6000 as a playable program. **A
 
 **[Downloads](releases/README.md) · [What's new](CHANGELOG.md) · [Get started](docs/QUICK-START.md) · [User guide](docs/USER-GUIDE.md) · [PDF manual](docs/S56K-Expanded-Edition-User-Guide.pdf) · [USB setup](docs/USB-UPDATER.md)**
 
+### Three separate tools, one sampler
+
+| Project | Purpose |
+| --- | --- |
+| **[S56K Editor](https://github.com/Tubbritt/S56K-Editor)** | Desktop control, file management and library transfers. |
+| **S56K Expanded Edition** | Optional sampler firmware with Auto Sample and Auto Loop features. This repository. |
+| **[S56K Firmware Updater](https://github.com/Tubbritt/S56K-Expanded-Edition/releases)** | A separate app for installing supported firmware images. |
+
+All three support the **AKAI S5000 and S6000**. Firmware and updater downloads live here; the Editor has its own repository. The Editor works with **stock OS 2.14** as well as Expanded Edition, so it does not require a firmware upgrade. Firmware installation stays in the separate updater.
+
 ### Download your upgrade
 
 | For your sampler | For your Windows PC |
