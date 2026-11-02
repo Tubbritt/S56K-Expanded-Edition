@@ -23,7 +23,7 @@ version.
 
 1. Identify the exact approved BIN or updater ZIP. Record its filename, byte
    count and SHA-256. Check that the file is the same build used for the stated
-   tests. Keep existing released files and tags intact.
+   tests. Keep existing published tags and their files intact. Superseded BINs may be removed from the current branch when requested, while their original versioned release record remains available.
 2. Place the compiled download and `SHA256SUMS.txt` in a new versioned folder
    under `releases/firmware/` or `releases/updater/`. Extend the explicit
    `.gitignore` allowlist for those files only; do not add development source,

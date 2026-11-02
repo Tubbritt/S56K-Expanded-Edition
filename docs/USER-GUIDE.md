@@ -2,13 +2,13 @@
 
 **Turn an external instrument into an Akai program, one note at a time.**
 
-**Version 1 · AKAI S5000 / S6000**
+**Version 1.1 · AKAI S5000 / S6000**
 
 [Home](../README.md) · [Quick start](QUICK-START.md) · [PDF manual](S56K-Expanded-Edition-User-Guide.pdf) · [Installation](INSTALLATION.md) · [Windows USB guide](USB-UPDATER.md)
 
 Read the [installation guide](INSTALLATION.md), [compatibility notes](COMPATIBILITY.md) and [risk disclaimer](../DISCLAIMER.md) before loading or installing firmware.
 
-The [release area](../releases/README.md) provides the firmware BIN and separate Windows updater. For Windows 11 driver setup and USB installation, follow the [USB driver and updater guide](USB-UPDATER.md). Auto Sample itself does not require a computer or USB card.
+The [release area](../releases/README.md) provides the V1.1 firmware BIN and the separate Windows updater. **Install V1.1 from floppy.** Firmware Updater 1.0 RC1 recognises the older Expanded Edition V1 and original Akai v2.14 images; it does not accept V1.1. The [USB guide](USB-UPDATER.md) covers those supported older images. Auto Sample itself does not require a computer or USB card.
 
 Auto Sample sends MIDI notes to an external instrument, records its audio and assigns the recordings to the current program. You choose the pitches, velocity layers and recording behaviour. Optional Auto Loop processing prepares sustained samples after each recording.
 
@@ -55,6 +55,8 @@ Open **REC LEVELS** before starting a long run. This uses the sampler's existing
 
 Use **TEST NOTE** and inspect the meters at the loudest velocity you plan to capture. Adjust the instrument's output and the sampler's recording gain for a healthy signal without clipping. For stereo, check both channels.
 
+Auto Sample enables input monitoring while you are on its setup pages and during capture. It restores previous monitoring preferences when handing back control. Monitoring can pause during loop processing and between captures; another active recorder is not taken over.
+
 Velocity may change the instrument's tone as well as its loudness. Recording gain controls the captured level. Set both appropriately for the sound.
 
 **START LEVEL**, available in REC SETUP and through the native recording controls, determines when incoming audio triggers recording. Set it above the background noise but low enough to catch the intended attack. A slow or very quiet sound may need a lower threshold. Test one note and inspect its beginning before recording the entire range.
@@ -100,7 +102,7 @@ Unavailable controls disappear. Their values remain stored and reappear when the
 
 ## 6. Loop the sustained part
 
-![Loop Setup showing percentage positions, Akai Auto Find, crossfade amount and shape, and Crop After Loop](../assets/screens/loop-setup.png)
+![V1.1 Loop Setup showing percentage positions, crossfade, Crop After Loop OFF and Play Mode UNTIL RELEASE](../assets/screens/loop-setup.png)
 
 Enable **AUTO LOOP** and open **LOOP SETUP**. Its percentages refer to the **captured held-note portion**, starting at the sample's playback start and ending before the external release tail. They do not include the tail in their measurement.
 
@@ -112,24 +114,29 @@ Enable **AUTO LOOP** and open **LOOP SETUP**. Its percentages refer to the **cap
 | **CROSSFADE** | Optionally processes the join using the native crossfade function. |
 | **XFADE AMOUNT** | Requested crossfade length as a percentage of the resulting loop length. |
 | **XFADE SHAPE** | Selects LINEAR, LOG or SINE. |
-| **CROP AFTER LOOP** | Chooses how much audio remains after a successful loop is prepared. |
+| **CROP AFTER LOOP** | OFF by default: keeps the full recorded release. ON trims after the loop end. |
+| **PLAY MODE** | F6: UNTIL RELEASE loops while the playback key is held; IN RELEASE keeps looping after Note Off under the amplitude envelope. |
 
 For a steady synth tone, try a five-second Note Time, Loop Start 50%, Loop End 95%, Auto Find ON and Crossfade ON at 10%. These are starting settings, not a promise that every patch will loop cleanly. Aim for a stable section after the initial attack and before the release.
 
 **Auto Find OFF** keeps the percentage positions as the starting loop without native refinement; the recording still has to pass the loop checks. **Auto Find ON** performs a local adjustment. It does not search every possible loop throughout the entire 50–95% region or automatically identify the musically best sustain.
 
-Crossfade amount is limited by the available pre-loop audio and loop length. A larger percentage can smooth a join but may change the sound. Audition the curves on separate test captures. With Crossfade OFF, amount and shape are hidden.
+Crossfade amount is limited by the available pre-loop audio and loop length. With **CROP AFTER LOOP OFF**, it is also limited to the held audio remaining after the loop end, so processing cannot alter the recorded release. The effective fade may therefore be shorter than requested. For a longer fade, try moving Loop End earlier. A larger percentage can smooth a join but may change the sound; audition the curves on separate test captures.
+
+A positive crossfade can work with endpoints that do not already closely match. With Crossfade OFF, or when no positive fade will fit, stricter join checks apply. Amount and shape are hidden when Crossfade is OFF.
 
 ### What happens to the tail?
 
 | Result | Audio retained |
 | --- | --- |
 | **AUTO LOOP OFF** | The ordinary recorded note and tail. |
-| **Successful loop, CROP OFF** | The held-note recording; the external release tail is removed. |
+| **Successful loop, CROP OFF** | The attack, held note and full recorded release tail. Only pre-trigger material before playback start is removed. |
 | **Successful loop, CROP ON** | The attack through loop end, plus the small native 15-frame playback margin. |
 | **Loop rejected for review** | The original recording, including its recorded tail. |
 
-The sampler records the external release before processing the loop. Cropping does not skip that waiting period. For the finished looped program, adjust playback release using the Akai's envelope controls.
+The sampler records the external release before processing the loop. Cropping does not skip that waiting period; AUTO END can shorten a quiet tail during recording.
+
+**PLAY MODE defaults to UNTIL RELEASE.** IN RELEASE allows looping to continue after the playback key is released. Auto Sample assigns program zones as **AS SAMPLE**, so they follow the mode stored in the sample. The amplitude envelope still determines what you hear after Note Off: retaining the recorded tail does not guarantee that every envelope setting will play all of it.
 
 Auto Loop checks each channel and can leave a recording unlooped for review. Listen to these results in the ordinary sample editor. Evolving pads, heavy chorus, noisy textures and rhythmic material may require different positions or manual editing. Loop Setup contains settings for the recordings you are about to make. Use the ordinary sample editor to inspect their waveforms after capture.
 
@@ -141,7 +148,11 @@ Press **START** on the main page. The display follows preparation, waiting for a
 
 ![Loop processing progress with looped and review counts](../assets/screens/loop-progress.png)
 
-**CANCEL** stops the run while keeping completed sample assignments in RAM. Finishing an active recording or processing operation may take a moment. The current unfinished capture may not be assigned to the program; inspect the samples in RAM if the display asks you to check them.
+**CANCEL** stops the run while keeping completed sample assignments in RAM. Finishing an active recording or processing operation may take a moment, including when Cancel is pressed just after Start. The current unfinished capture may not be assigned to the program; inspect the samples in RAM if the display asks you to check them.
+
+If a loop edit is safely refused before processing begins, the original recording is retained for **REVIEW** and the batch can continue. An uncertain processing failure stops the run with a specific error. The display can show **LAST LOOP**, the affected processing stage, and an Akai error code when available. Photograph the whole screen for troubleshooting.
+
+A restart-required fault keeps its explanation on screen and removes the inactive Cancel button. Further Cancel/Exit presses do not hide that message. Save completed work if the ordinary controls remain responsive before restarting.
 
 After completion, play across the keygroups and velocity boundaries. For looped sounds, hold notes long enough to hear several repetitions, then check the release. Review any unlooped recordings and make ordinary sample or program edits as needed.
 
@@ -158,6 +169,9 @@ After completion, play across the keygroups and velocity boundaries. For looped 
 | Decay is cut short | Lower End Level, increase Quiet Time or minimum timing, or use OFF to compare a full-duration recording. |
 | The tail always uses its maximum time | Background noise may remain above End Level; in stereo, check both channels. |
 | A loop is left for review | Try a steadier section, a longer held recording, different percentages or crossfade settings. The original recording is available for listening and manual work. |
+| The saved tail is present but cannot be heard on playback | Check PLAY MODE and the program's amplitude-envelope release. With UNTIL RELEASE, looping stops when you release the playback key. |
+| The crossfade seems shorter than requested | With Crop OFF, the fade is shortened to protect the recorded release. Try an earlier Loop End if more held audio is needed. |
+| **INPUT MONITOR UNAVAILABLE** | Check the recording source and whether another recording function owns the recorder. Monitoring can pause during loop processing and between captures. |
 | An option has disappeared | Enable its parent option: AUTO END for quiet controls, AUTO LOOP for loop controls, and CROSSFADE for amount/shape. |
 | A run stops with a processing or restart message | Stop further runs, inspect the samples already in RAM and record the settings/message for feedback. Save completed work through the normal controls if they remain responsive. |
 
@@ -165,9 +179,9 @@ For useful feedback, include your sampler model, mono/stereo mode, source instru
 
 ## 9. Expanded Edition startup
 
-The boot screen shows a CPU/circuit graphic, the correct **S5000 EX** or **S6000 EX** model logo, and **EXPANDED EDITION v1**. The EX lettering is outlined to match the model design.
+The boot screen shows a CPU/circuit graphic, the correct **S5000 EX** or **S6000 EX** model logo, and **EXPANDED EDITION V1.1**. The EX lettering is outlined to match the model design.
 
-The separate **Operating System VERSION 2.14** field is retained for compatibility. Expanded Edition v1 identifies the added feature set; it does not change the underlying Akai version identity. Use the checksum accompanying a firmware download to identify its exact file.
+The separate **Operating System VERSION 2.14** field is retained for compatibility. Expanded Edition V1.1 identifies the added feature set; it does not change the underlying Akai version identity. Use the checksum accompanying a firmware download to identify its exact file.
 
 ---
 

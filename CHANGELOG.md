@@ -8,8 +8,28 @@ requirements, known limits and testing.
 
 | Product | Current release | Date | Details |
 | --- | --- | --- | --- |
-| Sampler firmware | **Expanded Edition v1** | 23 October 2026 | [Release notes](releases/v1.md) · [Release & assets](https://github.com/Tubbritt/S56K-Expanded-Edition/releases/tag/expanded-v1) |
+| Sampler firmware | **Expanded Edition V1.1** | 2 November 2026 | [Release notes](releases/v1.1.md) · [Release & assets](https://github.com/Tubbritt/S56K-Expanded-Edition/releases/tag/expanded-v1.1) |
 | Windows USB app | **Firmware Updater 1.0 RC1** · release candidate | 23 October 2026 | [Release notes](releases/updater-1.0-rc1.md) · [Release & assets](https://github.com/Tubbritt/S56K-Expanded-Edition/releases/tag/updater-v1.0-rc1) |
+
+## Expanded Edition V1.1 — 2 November 2026
+
+Tag: `expanded-v1.1`. **[Complete plain-English changes and release notes](releases/v1.1.md).**
+
+- **Release tails:** fixed Crop OFF discarding the recorded release. It now keeps the attack, held note and complete recorded tail. Crop now defaults OFF; ON still deliberately trims after the loop.
+- **Playback mode:** added F6 PLAY MODE in LOOP SETUP. UNTIL RELEASE is the default; IN RELEASE allows looping after key release. Program zones use AS SAMPLE to respect the selected mode.
+- **Crossfade:** positive fades can process less closely matched endpoints. With Crop OFF, fades are limited to protect recorded release audio, so the effective fade may be shorter than requested.
+- **Input monitoring:** enabled in Auto Sample setup and capture, with proper handover and restoration of previous monitoring preferences. It can pause during processing and between captures.
+- **Cancellation:** fixed a recorder-start timing problem when cancelling immediately after START.
+- **Error display:** restart-required faults keep their explanation; the inactive Cancel button is removed and Cancel/Exit no longer replaces the error with a stuck STOPPING display.
+- **Stop explanations:** preserve the first setup, routing, recording, MIDI or page-navigation cause through cleanup, unless a more serious cleanup fault needs a restart.
+- **Loop failures:** confirmed refusals before processing starts keep the original recording, become REVIEW and continue. Uncertain failures stop with a specific error and are not automatically retried or mislabeled as user cancellation.
+- **Loop diagnostics:** LAST LOOP can show the affected processing stage and an Akai error code.
+- **Startup:** EXPANDED EDITION V1.1 on both model paths; the official Akai identity remains 2.14.
+- **Verification:** all 16 software suites passed for the exact published BIN, with independent review. The owner reported successful flashing after receiving the floppy test procedure; the model was not restated and V1.1 USB installation is not established.
+
+Uses **4 KiB more CPU RAM than V1**, with sample RAM capacity unchanged. Saving remains manual. These are confirmed code-path fixes; the original reporter's unexplained STOPPED event was not conclusively reproduced.
+
+**Install V1.1 from floppy. Firmware Updater 1.0 RC1 is unchanged and does not accept V1.1.** The old BIN was removed from the current repository tree; the original V1 tag and release history remain available.
 
 ## Expanded Edition v1 — 23 October 2026
 
@@ -32,7 +52,7 @@ Akai OS/settings/protocol version remains **2.14**; the edition label identifies
 the added features. The published BIN is the tested EX artwork revision 2 image.
 
 Auto Sample operation was reported on both sampler models during development.
-The current image was used in the successful S6000 / Windows 11 USB round-trip;
+The V1 image was used in the successful S6000 / Windows 11 USB round-trip;
 this does not establish S5000 USB installation coverage. See the
 [compatibility record](docs/COMPATIBILITY.md) and [full release notes](releases/v1.md).
 

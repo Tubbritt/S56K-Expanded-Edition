@@ -4,24 +4,24 @@
 
 ## Choose your download
 
-The operating system runs on your sampler. The optional Windows app installs it over USB. Download both for USB installation, or just the BIN for floppy loading and installation.
+The operating system runs on your sampler. **Download V1.1 and install from floppy.** The optional Windows updater is unchanged: version 1.0 RC1 accepts original Akai v2.14 and the previous Expanded V1, and **rejects V1.1**.
 
 | Release | Download | Instructions |
 | --- | --- | --- |
-| **Expanded Edition v1** · S5000 / S6000 | [S56K-EX.bin](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/expanded-v1/releases/firmware/v1/S56K-EX.bin) · 1 MiB | [Release notes](v1.md) · [Install](../docs/INSTALLATION.md) |
+| **Expanded Edition V1.1** · S5000 / S6000 | [S56K-EX.bin](https://github.com/Tubbritt/S56K-Expanded-Edition/releases/download/expanded-v1.1/S56K-EX.bin) · 1 MiB | [Release notes](v1.1.md) · [Install](../docs/INSTALLATION.md) |
 | **Firmware Updater 1.0 RC1** · Windows 11 x64 | [Windows ZIP](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/updater-v1.0-rc1/releases/updater/1.0-rc1/S56K-Firmware-Updater-1.0-RC1-win64.zip) · 1,001,521 bytes | [Release notes](updater-1.0-rc1.md) · [Driver setup & use](../docs/USB-UPDATER.md) |
 | **Illustrated manual** | [PDF user guide](../docs/S56K-Expanded-Edition-User-Guide.pdf) | Sampling, looping, floppy installation and USB driver/update instructions |
 
-The updater is a release candidate and is unsigned. It has a user-confirmed physical round-trip on the established S6000 / Windows 11 Pro 25H2 setup. An IB-S56USB card and WinUSB driver are required; USB is not needed for the firmware's sampling features. See [compatibility](../docs/COMPATIBILITY.md).
+The updater is a release candidate and is unsigned. Its user-confirmed S6000 / Windows 11 Pro 25H2 USB round-trip used Expanded V1, not V1.1. The owner has now reported successful V1.1 flashing after receiving the floppy procedure; model-specific and USB coverage are described in the compatibility record. An IB-S56USB card and WinUSB driver are required; USB is not needed for the firmware's sampling features. See [compatibility](../docs/COMPATIBILITY.md).
 
 ## Check your download
 
-Each versioned download folder includes a **SHA256SUMS.txt** file, linked from its GitHub Release. The primary files are identified by these SHA-256 values:
+The V1.1 release has a **[SHA256SUMS.txt](https://github.com/Tubbritt/S56K-Expanded-Edition/releases/download/expanded-v1.1/SHA256SUMS.txt)** attachment. Its matching versioned repository folder also includes this file. The updater checksum remains with its existing tagged download. The primary files are identified by these SHA-256 values:
 
 **S56K-EX.bin** — 1,048,576 bytes
 
 ```text
-5b2559d3137f29516130572c754c5cf1be45058a25d70cff5fbbc221944e7f2a
+cc3f6c056e0fb032303ee61f2e16c419c22708377cf888f0c1737be74321df93
 ```
 
 **S56K-Firmware-Updater-1.0-RC1-win64.zip** — 1,001,521 bytes
@@ -41,7 +41,7 @@ Letter case does not matter when comparing hashes. Stop if any character differs
 
 ## What is included
 
-- The **firmware release** links the shared OS BIN and its checksums in `releases/firmware/v1/`, plus the PDF manual.
+- The **V1.1 firmware release** attaches the shared OS BIN, checksum, PDF manual and notices directly under Assets. Matching BIN/checksum copies are in `releases/firmware/v1.1/`.
 - The **updater release** links the unchanged tested Windows app ZIP and its checksums in `releases/updater/1.0-rc1/`, plus the PDF manual. Extract the ZIP before running the app. Firmware is downloaded separately.
 - The tested ZIP's bundled `START_HERE.html` predates the successful hardware test. The [current USB guide](../docs/USB-UPDATER.md), PDF and release notes include the updated status.
 
@@ -51,7 +51,7 @@ Letter case does not matter when comparing hashes. Stop if any character differs
 
 The [release history](../CHANGELOG.md) tracks the firmware and updater separately, with features, dates and links to each version's detailed notes. Previous versions remain identifiable by their tags and checksums. Documentation and licensing updates do not change the released binaries. See [Preparing the next release](../docs/RELEASE-PROCESS.md) for the publication checklist.
 
-This repository distributes compiled downloads, documentation and artwork. Firmware and app source code, build tools and reverse-engineering material are maintained elsewhere. Binary downloads live in versioned **releases/** folders and are linked from the corresponding GitHub Releases. Each release links to its tagged copy so later documentation edits do not change that download.
+This repository distributes compiled downloads, documentation and artwork. Firmware and app source code, build tools and reverse-engineering material are maintained elsewhere. The current firmware downloads are attached directly to its GitHub Release, with matching tagged copies in a versioned **releases/** folder. The unchanged updater still uses its tagged folder download. The previous firmware BIN has been removed from the current repository files; its original tag and historical release remain intact.
 
 GitHub automatically adds **“Source code” ZIP/TAR** links to releases. These are whole-repository snapshots containing documentation and compiled downloads; they do not contain firmware or app development source. Use the explicitly named BIN or updater ZIP above to get the correct file directly.
 

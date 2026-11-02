@@ -10,6 +10,8 @@
 
 **23 October 2026 · Release candidate · Unsigned**
 
+> **Compatibility update — 2 November 2026:** this unchanged updater accepts original Expanded Edition **v1** and factory Akai **v2.14** only. It **does not accept Expanded Edition V1.1**. Install V1.1 using the [floppy guide](../docs/INSTALLATION.md).
+
 **[Download Windows updater ZIP](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/updater-v1.0-rc1/releases/updater/1.0-rc1/S56K-Firmware-Updater-1.0-RC1-win64.zip) · [SHA256SUMS.txt](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/updater-v1.0-rc1/releases/updater/1.0-rc1/SHA256SUMS.txt) · [Driver setup and installation](../docs/USB-UPDATER.md)**
 
 ## What it does
@@ -30,11 +32,11 @@ RC1 accepts these two exact 1 MiB images:
 | Expanded Edition v1 / EX artwork revision 2 | `5b2559d3137f29516130572c754c5cf1be45058a25d70cff5fbbc221944e7f2a` |
 | Original Akai OS 2.14 | `05e466a7a19e5abde1e53660e0069bf2fb34bb33f705841185883a78b5369402` |
 
-Download the [Expanded BIN separately](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/expanded-v1/releases/firmware/v1/S56K-EX.bin). The factory OS is not bundled in either release. Renaming an approved file is allowed; different revisions or modified files are rejected. The visible OS version remains 2.14 in both images.
+The supported Expanded image is the **archived v1** build; see its [historical release record](https://github.com/Tubbritt/S56K-Expanded-Edition/releases/tag/expanded-v1). The current V1.1 download is not supported by this app. The factory OS is not bundled in either release. Renaming an approved file is allowed; different revisions or modified files are rejected. The visible underlying OS version remains 2.14 in both supported images.
 
 ## Verification
 
-On 23 October 2026 the user confirmed a complete **Expanded → original Akai v2.14 → Expanded** USB round-trip after following the reboot and visual-check procedure. The established setup is an **S6000 with Windows 11 Pro 25H2**. This is user-reported hardware evidence; it does not establish S5000 USB, ak.Sys, Windows ARM or every PC/USB configuration.
+On 23 October 2026 the user confirmed a complete **Expanded Edition v1 → original Akai v2.14 → Expanded Edition v1** USB round-trip after following the reboot and visual-check procedure. The established setup is an **S6000 with Windows 11 Pro 25H2**. This is user-reported hardware evidence; it does not establish V1.1 USB installation, S5000 USB, ak.Sys, Windows ARM or every PC/USB configuration.
 
 Software checks covered the actual update engine against native firmware updater instructions, malformed transfers and status replies, WinUSB completion/error handling, and app workflows. These complement the physical test without guaranteeing a risk-free update. The app's completion message reports the sampler's acknowledgements; it does not independently read back the complete flash or verify the reboot.
 

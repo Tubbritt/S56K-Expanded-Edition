@@ -4,7 +4,7 @@
 
 [Home](../README.md) · [Full user guide](USER-GUIDE.md) · [Installation](INSTALLATION.md)
 
-These steps begin with **S56K Expanded Edition v1** running on your sampler. For loading and permanent installation, follow the [installation guide](INSTALLATION.md) and read the [risk disclaimer](../DISCLAIMER.md).
+These steps begin with **S56K Expanded Edition V1.1** running on your sampler. Use the [floppy installation guide](INSTALLATION.md) and read the [risk disclaimer](../DISCLAIMER.md). The existing Windows updater 1.0 RC1 does not accept the V1.1 BIN.
 
 ## 1. Connect your instrument
 
@@ -38,6 +38,8 @@ Open **REC LEVELS**. Select MONO or STEREO, choose the recording source and set 
 
 In **REC SETUP**, set START LEVEL above background noise but below the sound's attack. Leave generous free sample RAM.
 
+Auto Sample provides input monitoring during setup and recording, where supported by the selected input. Monitoring can pause during loop processing and between recordings.
+
 ## 4. Capture and listen
 
 Return to the main page and press **START**. The sampler triggers the note, records the audio and adds the sample to your program in RAM.
@@ -50,11 +52,13 @@ Start a fresh program and widen LOW NOTE/HIGH NOTE. NOTE STEP 3 samples every th
 
 For a sustained patch, try AUTO END **TAIL ONLY** to retain the full held note while ending a quiet tail early. Optional AUTO LOOP can prepare a sustain; the [loop guide](USER-GUIDE.md#6-loop-the-sustained-part) explains percentages, Auto Find, crossfade and cropping.
 
+In LOOP SETUP, **CROP AFTER LOOP OFF** now keeps the complete recorded release. **PLAY MODE: UNTIL RELEASE** is the default: the sample loops while you hold the playback key. Choose **IN RELEASE** if it should keep looping after key release, under the amplitude envelope. Listen to the release as well as the sustain before saving.
+
 ## 6. Save it yourself
 
 Listen across the completed program, then use the ordinary **SAVE** page to save the program **with its samples**. Auto Sample never saves the recordings to disk automatically.
 
-Avoid simultaneous ak.Sys/SysEx sample editing during Auto Loop. CANCEL retains completed assignments in RAM.
+Avoid simultaneous ak.Sys, Editor or SysEx sample editing during Auto Loop. CANCEL retains completed assignments in RAM. If a run stops, keep a photograph of the full status message and any **LAST LOOP** detail before restarting.
 
 
 [Explore all the controls →](USER-GUIDE.md) · [Compatibility](COMPATIBILITY.md)

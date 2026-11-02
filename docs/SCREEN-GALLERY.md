@@ -2,17 +2,17 @@
 
 [Home](../README.md) · [User guide](USER-GUIDE.md) · [Quick start](QUICK-START.md)
 
-From the first note to the finished program, these are the screens you use on the sampler. Images are native firmware renders at 320 × 240 pixels, with example settings and progress states. Click an image to inspect it.
+From the first note to the finished program, these are the V1.1 screens you use on the sampler. Images are native firmware renders at 320 × 240 pixels, with example settings and progress states. Click an image to inspect it.
 
 ## Set up a capture
 
-![Main Auto Sample screen: MY SYNTH, C2 to C6, 17 notes and one velocity](../assets/screens/setup.png)
+![Auto Sample main screen with note range, MIDI routing and recording settings](../assets/screens/setup.png)
 
 Musical note names, rear-panel MIDI A/B labels, a recording-count summary and consistent submenu buttons. Version numbers stay out of the Auto Sample interface.
 
 ## Choose when to stop
 
-![Recording setup with TAIL ONLY selected and Minimum Note hidden](../assets/screens/record-setup.png)
+![Recording setup with NOTE + TAIL selected and Minimum Note available](../assets/screens/record-setup.png)
 
 Auto End reveals the controls that apply to the chosen mode. Hidden values are retained for when you enable them again.
 
@@ -26,7 +26,7 @@ The four-layer example captures velocities 30, 60, 90 and 120. Capture velocity 
 
 ![Loop Setup with 50 percent start, 95 percent end and optional Akai processing](../assets/screens/loop-setup.png)
 
-Percentage positions define the initial loop within the held note. Akai Auto Find can refine it locally; crossfade and cropping finish the preparation. Only the enabled controls appear. The waveform can be inspected in the sample editor after capture.
+Percentage positions define the initial loop within the held note. Akai Auto Find can refine it locally. **CROP AFTER LOOP OFF** keeps the recorded release, and **PLAY MODE** chooses UNTIL RELEASE or IN RELEASE. Crossfade is shortened when needed to protect the retained tail. Only the enabled controls appear. The waveform can be inspected in the sample editor after capture.
 
 ## Follow the run
 
@@ -40,9 +40,9 @@ The progress screen follows recording and processing. Completed assignments rema
 
 | S5000 EX | S6000 EX |
 | --- | --- |
-| ![S5000 EX startup with CPU circuit artwork and EXPANDED EDITION v1 caption](../assets/screens/boot-s5000.png) | ![S6000 EX startup with CPU circuit artwork and EXPANDED EDITION v1 caption](../assets/screens/boot-s6000.png) |
+| ![S5000 EX startup with CPU circuit artwork and EXPANDED EDITION V1.1 caption](../assets/screens/boot-s5000.png) | ![S6000 EX startup with CPU circuit artwork and EXPANDED EDITION V1.1 caption](../assets/screens/boot-s6000.png) |
 
-A shared CPU/circuit graphic, clean outlined EX lettering and **EXPANDED EDITION v1** give the update its own identity. Each sampler displays its correct model name. The separate **Operating System VERSION 2.14** field remains unchanged for compatibility.
+A shared CPU/circuit graphic, clean outlined EX lettering and **EXPANDED EDITION V1.1** give the update its own identity. Each sampler displays its correct model name. The separate **Operating System VERSION 2.14** field remains unchanged for compatibility.
 
 ---
 
