@@ -59,7 +59,10 @@ repack an already released ZIP to add them.
    **Assets** list. Attach applicable licence/notices files and, when useful, the
    manual. Use explicit asset links for the main downloads; retain the tagged
    repository copies as matching records.
-4. Download the uploaded binary asset and verify its size and SHA-256 against
+   If the integration cannot upload attachments, link the exact tagged repository
+   files instead and state that downloads use those links. Do not leave asset URLs
+   pointing to missing attachments. Keep the release tag and binary unchanged.
+4. Download the uploaded binary asset or tagged repository download and verify its size and SHA-256 against
    the approved file. Check the release's links and notes, then publish with the
    correct release/prerelease status. Check the public-facing download route.
 

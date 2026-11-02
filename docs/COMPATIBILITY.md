@@ -10,7 +10,7 @@ Auto Sample uses the sampler's MIDI outputs and recording inputs. USB is not req
 
 | Download | Supported use |
 | --- | --- |
-| **[Expanded Edition V1.1 — S56K-EX.bin](https://github.com/Tubbritt/S56K-Expanded-Edition/releases/download/expanded-v1.1/S56K-EX.bin)** | Shared S5000/S6000 firmware. Temporary floppy loading or permanent floppy installation. |
+| **[Expanded Edition V1.1 — S56K-EX.bin](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/expanded-v1.1/releases/firmware/v1.1/S56K-EX.bin)** | Shared S5000/S6000 firmware. Temporary floppy loading or permanent floppy installation. |
 | **[Firmware Updater 1.0 RC1](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/updater-v1.0-rc1/releases/updater/1.0-rc1/S56K-Firmware-Updater-1.0-RC1-win64.zip)** | Standalone Intel/AMD Windows x64 app; IB-S56USB card and WinUSB required. Accepts only original Expanded Edition v1 and factory Akai v2.14. **Rejects V1.1.** |
 
 V1.1 firmware SHA-256: `cc3f6c056e0fb032303ee61f2e16c419c22708377cf888f0c1737be74321df93`.

@@ -8,7 +8,7 @@ The operating system runs on your sampler. **Download V1.1 and install from flop
 
 | Release | Download | Instructions |
 | --- | --- | --- |
-| **Expanded Edition V1.1** · S5000 / S6000 | [S56K-EX.bin](https://github.com/Tubbritt/S56K-Expanded-Edition/releases/download/expanded-v1.1/S56K-EX.bin) · 1 MiB | [Release notes](v1.1.md) · [Install](../docs/INSTALLATION.md) |
+| **Expanded Edition V1.1** · S5000 / S6000 | [S56K-EX.bin](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/expanded-v1.1/releases/firmware/v1.1/S56K-EX.bin) · 1 MiB | [Release notes](v1.1.md) · [Install](../docs/INSTALLATION.md) |
 | **Firmware Updater 1.0 RC1** · Windows 11 x64 | [Windows ZIP](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/updater-v1.0-rc1/releases/updater/1.0-rc1/S56K-Firmware-Updater-1.0-RC1-win64.zip) · 1,001,521 bytes | [Release notes](updater-1.0-rc1.md) · [Driver setup & use](../docs/USB-UPDATER.md) |
 | **Illustrated manual** | [PDF user guide](../docs/S56K-Expanded-Edition-User-Guide.pdf) | Sampling, looping, floppy installation and USB driver/update instructions |
 
@@ -16,7 +16,7 @@ The updater is a release candidate and is unsigned. Its user-confirmed S6000 / W
 
 ## Check your download
 
-The V1.1 release has a **[SHA256SUMS.txt](https://github.com/Tubbritt/S56K-Expanded-Edition/releases/download/expanded-v1.1/SHA256SUMS.txt)** attachment. Its matching versioned repository folder also includes this file. The updater checksum remains with its existing tagged download. The primary files are identified by these SHA-256 values:
+The V1.1 release links its **[SHA256SUMS.txt](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/expanded-v1.1/releases/firmware/v1.1/SHA256SUMS.txt)** in the tagged versioned download folder. The updater checksum remains with its existing tagged download. The primary files are identified by these SHA-256 values:
 
 **S56K-EX.bin** — 1,048,576 bytes
 
@@ -41,7 +41,7 @@ Letter case does not matter when comparing hashes. Stop if any character differs
 
 ## What is included
 
-- The **V1.1 firmware release** attaches the shared OS BIN, checksum, PDF manual and notices directly under Assets. Matching BIN/checksum copies are in `releases/firmware/v1.1/`.
+- The **V1.1 firmware release** links the shared OS BIN and checksum from the immutable `expanded-v1.1` tag in `releases/firmware/v1.1/`, plus the current PDF manual and notices. Use those named download links; the release has no separate binary attachments.
 - The **updater release** links the unchanged tested Windows app ZIP and its checksums in `releases/updater/1.0-rc1/`, plus the PDF manual. Extract the ZIP before running the app. Firmware is downloaded separately.
 - The tested ZIP's bundled `START_HERE.html` predates the successful hardware test. The [current USB guide](../docs/USB-UPDATER.md), PDF and release notes include the updated status.
 
@@ -51,7 +51,7 @@ Letter case does not matter when comparing hashes. Stop if any character differs
 
 The [release history](../CHANGELOG.md) tracks the firmware and updater separately, with features, dates and links to each version's detailed notes. Previous versions remain identifiable by their tags and checksums. Documentation and licensing updates do not change the released binaries. See [Preparing the next release](../docs/RELEASE-PROCESS.md) for the publication checklist.
 
-This repository distributes compiled downloads, documentation and artwork. Firmware and app source code, build tools and reverse-engineering material are maintained elsewhere. The current firmware downloads are attached directly to its GitHub Release, with matching tagged copies in a versioned **releases/** folder. The unchanged updater still uses its tagged folder download. The previous firmware BIN has been removed from the current repository files; its original tag and historical release remain intact.
+This repository distributes compiled downloads, documentation and artwork. Firmware and app source code, build tools and reverse-engineering material are maintained elsewhere. Firmware and updater downloads use immutable tagged copies in versioned **releases/** folders, linked from their GitHub Releases. The previous firmware BIN has been removed from the current repository files; its original tag and historical release remain intact.
 
 GitHub automatically adds **“Source code” ZIP/TAR** links to releases. These are whole-repository snapshots containing documentation and compiled downloads; they do not contain firmware or app development source. Use the explicitly named BIN or updater ZIP above to get the correct file directly.
 

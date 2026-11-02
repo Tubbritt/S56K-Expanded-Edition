@@ -26,7 +26,7 @@ All three support the **AKAI S5000 and S6000**. Firmware and updater downloads l
 | --- | --- |
 | **Expanded Edition V1.1** | **Firmware Updater 1.0 RC1** |
 | One OS image for the S5000 and S6000. **Install V1.1 from floppy.** | Standalone Windows 11 x64 app for **original Akai v2.14 and Expanded V1**. It does **not** accept V1.1. |
-| **[Download S56K-EX.bin](https://github.com/Tubbritt/S56K-Expanded-Edition/releases/download/expanded-v1.1/S56K-EX.bin)** | **[Download Windows updater ZIP](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/updater-v1.0-rc1/releases/updater/1.0-rc1/S56K-Firmware-Updater-1.0-RC1-win64.zip)** |
+| **[Download S56K-EX.bin](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/expanded-v1.1/releases/firmware/v1.1/S56K-EX.bin)** | **[Download Windows updater ZIP](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/updater-v1.0-rc1/releases/updater/1.0-rc1/S56K-Firmware-Updater-1.0-RC1-win64.zip)** |
 | [V1.1 release notes](releases/v1.1.md) · [Installation](docs/INSTALLATION.md) | [Updater release notes](releases/updater-1.0-rc1.md) · [USB driver & app guide](docs/USB-UPDATER.md) |
 
 The USB updater needs an **IB-S56USB card** and Microsoft's **WinUSB** driver. Its confirmed S6000 USB round-trip used the previous Expanded V1 firmware. The owner has reported successful V1.1 flashing using the supplied floppy procedure; this does not establish V1.1 USB compatibility. See [compatibility](docs/COMPATIBILITY.md) for the scope of testing and [downloads](releases/README.md) for checksums. Read the [flashing disclaimer](DISCLAIMER.md) before installing.

@@ -4,7 +4,7 @@
 
 The firmware image is **S56K-EX.bin**, shared by the AKAI S5000 and S6000. The boot screen selects the correct model graphic automatically and displays **EXPANDED EDITION V1.1**. The underlying AKAI operating-system identity remains **2.14**.
 
-**[Download V1.1 — S56K-EX.bin](https://github.com/Tubbritt/S56K-Expanded-Edition/releases/download/expanded-v1.1/S56K-EX.bin)** · **[SHA256SUMS.txt](https://github.com/Tubbritt/S56K-Expanded-Edition/releases/download/expanded-v1.1/SHA256SUMS.txt)** · **[What changed](../releases/v1.1.md)**
+**[Download V1.1 — S56K-EX.bin](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/expanded-v1.1/releases/firmware/v1.1/S56K-EX.bin)** · **[SHA256SUMS.txt](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/expanded-v1.1/releases/firmware/v1.1/SHA256SUMS.txt)** · **[What changed](../releases/v1.1.md)**
 
 **Use floppy for V1.1.** The existing Windows Firmware Updater **1.0 RC1 does not accept V1.1**. It recognises only the original Expanded Edition v1 and factory Akai v2.14 images. Its USB instructions remain available for those files; changing the filename does not add support for V1.1.
 
