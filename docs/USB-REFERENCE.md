@@ -4,7 +4,7 @@
 
 ## About this version
 
-**Firmware Updater 1.0 RC1 does not accept Expanded Edition V1.1.** Use the [floppy installation guide](INSTALLATION.md) for V1.1. This reference covers the unchanged updater and its two supported older images.
+**Firmware Updater 1.0 RC1 does not accept Expanded Edition V1.1 or V1.2.** Use the [floppy installation guide](INSTALLATION.md) for V1.2. This reference covers the unchanged updater and its two supported older images.
 
 The app is **1.0 RC1** and is unsigned. Windows may show an unknown-publisher or SmartScreen warning; check the download source and checksum rather than disabling Windows security or driver-signature enforcement. The reported physical test used Expanded Edition **v1**, an S6000 and Windows 11 Pro 25H2; see [compatibility](COMPATIBILITY.md) for coverage.
 
@@ -26,20 +26,20 @@ Both methods assign Microsoft's WinUSB to the sampler; Zadig is an optional setu
 
 ## Supported files
 
-Both supported firmware files are **1,048,576 bytes**. Renaming a recognised file is fine; editing it or using a different revision causes rejection. The recognised Expanded image is the original **v1 / EX artwork revision 2**, not the current V1.1 release.
+Both supported firmware files are **1,048,576 bytes**. Renaming a recognised file is fine; editing it or using a different revision causes rejection. The recognised Expanded image is the original **v1 / EX artwork revision 2**, not the current V1.2 release.
 
 | Firmware | SHA-256 |
 | --- | --- |
 | **Expanded Edition v1 — `S56K-EX.bin`** | `5b2559d3137f29516130572c754c5cf1be45058a25d70cff5fbbc221944e7f2a` |
 | **Original Akai v2.14 — `s56v214.bin`** | `05e466a7a19e5abde1e53660e0069bf2fb34bb33f705841185883a78b5369402` |
 
-The factory BIN is recognised for restoration but is not included in these downloads. Retain your original Akai image if you need that option. Other firmware revisions require an updater that explicitly supports them; do not bypass the file checks. V1.1's checksum starts `cc3f6c05`; it is intentionally absent from RC1's list and must be installed from floppy for this release.
+The factory BIN is recognised for restoration but is not included in these downloads. Retain your original Akai image if you need that option. Other firmware revisions require an updater that explicitly supports them; do not bypass the file checks. V1.2's checksum starts `e29e16a1`; it is intentionally absent from RC1's list and must be installed from floppy for this release.
 
 To check a download in PowerShell, run `Get-FileHash .\S56K-EX.bin -Algorithm SHA256` and compare the result with the table or the release's `SHA256SUMS.txt`. The updater ZIP's SHA-256 is:
 
 `bcb49f0354e3a9b5eaf043ed17b8a346bb5acf6a35193d3ec9cef33f0566375c`
 
-**Updating from factory OS:** the running sampler OS performs the flash write. Factory v2.14 retains its older allocation and final-byte comparison limitations until the new OS is running. The successful factory-to-Expanded **v1** hardware test establishes that route on the tested setup; it does not establish V1.1 USB support or remove those older limitations. Always start with a freshly booted, unloaded sampler.
+**Updating from factory OS:** the running sampler OS performs the flash write. Factory v2.14 retains its older allocation and final-byte comparison limitations until the new OS is running. The successful factory-to-Expanded **v1** hardware test establishes that route on the tested setup; it does not establish V1.1 or V1.2 USB support or remove those older limitations. Always start with a freshly booted, unloaded sampler.
 
 ## Troubleshooting
 
@@ -50,7 +50,7 @@ To check a download in PowerShell, run `Get-FileHash .\S56K-EX.bin -Algorithm SH
 | **No usable interface registered** | Use Zadig to install a device-specific WinUSB association, reconnect USB and refresh. |
 | **Cannot open / access denied / connection busy** | Close ak.Sys and other sampler USB tools. Reconnect USB and try Connect again before installation. |
 | **Timeout during Connect** | Save the report. Check cable and power; close competing tools. If needed, save sampler work and restart it before trying again. This advice applies before an update, not during flash writing. |
-| **V1.1 BIN rejected** | Expected with updater 1.0 RC1: use the [V1.1 floppy procedure](INSTALLATION.md). Renaming the file or changing the Windows driver cannot add support. |
+| **V1.1 / V1.2 BIN rejected** | Expected with updater 1.0 RC1: use the [V1.2 floppy procedure](INSTALLATION.md). Renaming the file or changing the Windows driver cannot add support. |
 | **Other BIN rejected** | Check it against the two supported hashes above. Do not select a test build, ZIP file or GitHub “Source code” archive. |
 | **Install disabled after a completed update** | This is intentional. Close and reopen the app for a new session. |
 

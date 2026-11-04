@@ -8,12 +8,28 @@ requirements, known limits and testing.
 
 | Product | Current release | Date | Details |
 | --- | --- | --- | --- |
-| Sampler firmware | **Expanded Edition V1.1** | 2 November 2026 | [Release notes](releases/v1.1.md) · [Release & assets](https://github.com/Tubbritt/S56K-Expanded-Edition/releases/tag/expanded-v1.1) |
-| Windows USB app | **Firmware Updater 1.0 RC1** · release candidate | 23 October 2026 | [Release notes](releases/updater-1.0-rc1.md) · [Release & assets](https://github.com/Tubbritt/S56K-Expanded-Edition/releases/tag/updater-v1.0-rc1) |
+| Sampler firmware | **Expanded Edition V1.2** | 4 November 2026 | [Release notes](releases/v1.2.md) · [GitHub Release](https://github.com/Tubbritt/S56K-Expanded-Edition/releases/tag/expanded-v1.2) |
+| Windows USB app | **Firmware Updater 1.0 RC1** · release candidate | 23 October 2026 | [Release notes](releases/updater-1.0-rc1.md) · [GitHub Release](https://github.com/Tubbritt/S56K-Expanded-Edition/releases/tag/updater-v1.0-rc1) |
+
+## Expanded Edition V1.2 — 4 November 2026
+
+Tag: `expanded-v1.2`. **[Complete plain-English changes and release notes](releases/v1.2.md).**
+
+- **Record Arm Failed:** fixed Auto Sample stopping when too little recording workspace was immediately available, even though the sampler still showed free sample RAM. It now waits for background cleanup and can organise sample memory before the next recording.
+- **Controlled recovery:** after the recorder has been cleaned up, one retry is allowed for the specific recording-memory error. Other recording errors still stop the batch and report the problem.
+- **Cancellation and cleanup:** improved cancellation and timeout handling while sample memory is being organised. Another recording cannot start while that cleanup remains unfinished; completed samples stay in RAM.
+- **Progress and diagnostics:** added clearer waiting/organising messages, recovery counters and diagnostic information for recording-memory failures.
+- **Cropping label:** corrected misleading cropping status text when Crop after loop is OFF. This label fix does not change the underlying sample processing.
+- **Startup:** EXPANDED EDITION V1.2 on both model paths, with the native Akai identity still 2.14.
+- **Verification:** all 20 software-check suites passed for the exact published BIN, followed by independent review. The owner reported stable operation of the preceding recovery build and confirmed successful flashing of this V1.2 BIN after receiving the floppy flash-and-reboot procedure.
+
+V1.1's release-tail, monitoring and loop/crossfade improvements remain in place. V1.2 reserves **8 KiB more CPU RAM than V1.1**; sample RAM capacity is unchanged. A full sampler can still run out of recording space. Saving remains manual.
+
+**Install V1.2 from floppy. Firmware Updater 1.0 RC1 is unchanged and accepts neither V1.1 nor V1.2.** V1.1's BIN has been removed from the current repository tree; its original tag and release history remain available.
 
 ## Expanded Edition V1.1 — 2 November 2026
 
-Tag: `expanded-v1.1`. **[Complete plain-English changes and release notes](releases/v1.1.md).**
+Tag: `expanded-v1.1`. Superseded by V1.2. **[Complete plain-English changes and release notes](releases/v1.1.md).**
 
 - **Release tails:** fixed Crop OFF discarding the recorded release. It now keeps the attack, held note and complete recorded tail. Crop now defaults OFF; ON still deliberately trims after the loop.
 - **Playback mode:** added F6 PLAY MODE in LOOP SETUP. UNTIL RELEASE is the default; IN RELEASE allows looping after key release. Program zones use AS SAMPLE to respect the selected mode.

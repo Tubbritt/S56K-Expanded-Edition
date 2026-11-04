@@ -1,8 +1,8 @@
 # Update your sampler from Windows
 
-[Home](../README.md) · [Download updater](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/updater-v1.0-rc1/releases/updater/1.0-rc1/S56K-Firmware-Updater-1.0-RC1-win64.zip) · [Current V1.1 floppy installation](INSTALLATION.md) · [Troubleshooting](USB-REFERENCE.md#troubleshooting)
+[Home](../README.md) · [Download updater](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/updater-v1.0-rc1/releases/updater/1.0-rc1/S56K-Firmware-Updater-1.0-RC1-win64.zip) · [Current V1.2 floppy installation](INSTALLATION.md) · [Troubleshooting](USB-REFERENCE.md#troubleshooting)
 
-> **Installing Expanded Edition V1.1? Use [floppy](INSTALLATION.md).** Firmware Updater **1.0 RC1 rejects V1.1** because it is not on the app's supported-file list. This guide covers only the original **Expanded Edition v1** and **factory Akai v2.14** images. The updater and its illustrated screens are unchanged.
+> **Installing Expanded Edition V1.2? Use [floppy](INSTALLATION.md).** Firmware Updater **1.0 RC1 rejects V1.1 and V1.2** because neither is on the app's supported-file list. This guide covers only the original **Expanded Edition v1** and **factory Akai v2.14** images. The updater and its illustrated screens are unchanged.
 
 **Windows 11 x64 · S5000/S6000 with an IB-S56USB card · Microsoft WinUSB.** Extract the updater ZIP, then open `S56K-Firmware-Updater.exe`. Firmware is a separate download. This is an unsigned **1.0 RC1** app; see [compatibility](COMPATIBILITY.md) for test coverage.
 
@@ -16,11 +16,11 @@ Check you selected the Akai device (`USB\VID_09E8&PID_005E`). Reconnect USB, the
 
 ## 1. Connect and choose your BIN
 
-Select the sampler and click **Connect**, then **Choose BIN…** and select an exact [supported image](USB-REFERENCE.md#supported-files): the original v1 `S56K-EX.bin` or factory `s56v214.bin`. Look for **Connected**, **Exact SHA-256 match** and **Ready to install**. The current V1.1 download will be rejected; this is expected and is not a USB-driver fault.
+Select the sampler and click **Connect**, then **Choose BIN…** and select an exact [supported image](USB-REFERENCE.md#supported-files): the original v1 `S56K-EX.bin` or factory `s56v214.bin`. Look for **Connected**, **Exact SHA-256 match** and **Ready to install**. The current V1.2 download will be rejected; this is expected and is not a USB-driver fault.
 
 ![Illustrated app screen: connected S6000 with S56K-EX.bin validated and Ready to install](../assets/updater/ready-to-install.png)
 
-*Illustrations adapted from the supplied Windows screenshots of Expanded Edition v1 installation. They do not show V1.1 support.*
+*Illustrations adapted from the supplied Windows screenshots of Expanded Edition v1 installation. They do not show V1.1 or V1.2 support.*
 
 ## 2. Confirm the installation
 

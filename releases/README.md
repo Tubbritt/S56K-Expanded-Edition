@@ -4,24 +4,24 @@
 
 ## Choose your download
 
-The operating system runs on your sampler. **Download V1.1 and install from floppy.** The optional Windows updater is unchanged: version 1.0 RC1 accepts original Akai v2.14 and the previous Expanded V1, and **rejects V1.1**.
+The operating system runs on your sampler. **Download V1.2 and install from floppy.** The optional Windows updater is unchanged: version 1.0 RC1 accepts original Akai v2.14 and the previous Expanded V1, and **rejects V1.1 and V1.2**.
 
 | Release | Download | Instructions |
 | --- | --- | --- |
-| **Expanded Edition V1.1** · S5000 / S6000 | [S56K-EX.bin](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/expanded-v1.1/releases/firmware/v1.1/S56K-EX.bin) · 1 MiB | [Release notes](v1.1.md) · [Install](../docs/INSTALLATION.md) |
+| **Expanded Edition V1.2** · S5000 / S6000 | [S56K-EX.bin](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/expanded-v1.2/releases/firmware/v1.2/S56K-EX.bin) · 1 MiB | [Release notes](v1.2.md) · [Install](../docs/INSTALLATION.md) |
 | **Firmware Updater 1.0 RC1** · Windows 11 x64 | [Windows ZIP](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/updater-v1.0-rc1/releases/updater/1.0-rc1/S56K-Firmware-Updater-1.0-RC1-win64.zip) · 1,001,521 bytes | [Release notes](updater-1.0-rc1.md) · [Driver setup & use](../docs/USB-UPDATER.md) |
 | **Illustrated manual** | [PDF user guide](../docs/S56K-Expanded-Edition-User-Guide.pdf) | Sampling, looping, floppy installation and USB driver/update instructions |
 
-The updater is a release candidate and is unsigned. Its user-confirmed S6000 / Windows 11 Pro 25H2 USB round-trip used Expanded V1, not V1.1. The owner has now reported successful V1.1 flashing after receiving the floppy procedure; model-specific and USB coverage are described in the compatibility record. An IB-S56USB card and WinUSB driver are required; USB is not needed for the firmware's sampling features. See [compatibility](../docs/COMPATIBILITY.md).
+The updater is a release candidate and is unsigned. Its user-confirmed S6000 / Windows 11 Pro 25H2 USB round-trip used Expanded V1, not V1.2. The owner has confirmed successful V1.2 flashing after receiving the floppy flash-and-reboot procedure; model-specific and USB coverage are described in the compatibility record. An IB-S56USB card and WinUSB driver are required; USB is not needed for the firmware's sampling features. See [compatibility](../docs/COMPATIBILITY.md).
 
 ## Check your download
 
-The V1.1 release links its **[SHA256SUMS.txt](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/expanded-v1.1/releases/firmware/v1.1/SHA256SUMS.txt)** in the tagged versioned download folder. The updater checksum remains with its existing tagged download. The primary files are identified by these SHA-256 values:
+The V1.2 release links its **[SHA256SUMS.txt](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/expanded-v1.2/releases/firmware/v1.2/SHA256SUMS.txt)** in the tagged versioned download folder. The updater checksum remains with its existing tagged download. The primary files are identified by these SHA-256 values:
 
 **S56K-EX.bin** — 1,048,576 bytes
 
 ```text
-cc3f6c056e0fb032303ee61f2e16c419c22708377cf888f0c1737be74321df93
+e29e16a1c9dde87dd5ac543bed3ff2d195b56931765cc24b84ba7dfb4a767474
 ```
 
 **S56K-Firmware-Updater-1.0-RC1-win64.zip** — 1,001,521 bytes
@@ -41,7 +41,7 @@ Letter case does not matter when comparing hashes. Stop if any character differs
 
 ## What is included
 
-- The **V1.1 firmware release** links the shared OS BIN and checksum from the immutable `expanded-v1.1` tag in `releases/firmware/v1.1/`, plus the current PDF manual and notices. Use those named download links; the release has no separate binary attachments.
+- The **V1.2 firmware release** links the shared OS BIN and checksum from the immutable `expanded-v1.2` tag in `releases/firmware/v1.2/`, plus the current PDF manual and notices. Use those named download links; the release has no separate binary attachments.
 - The **updater release** links the unchanged tested Windows app ZIP and its checksums in `releases/updater/1.0-rc1/`, plus the PDF manual. Extract the ZIP before running the app. Firmware is downloaded separately.
 - The tested ZIP's bundled `START_HERE.html` predates the successful hardware test. The [current USB guide](../docs/USB-UPDATER.md), PDF and release notes include the updated status.
 

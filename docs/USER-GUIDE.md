@@ -2,13 +2,13 @@
 
 **Turn an external instrument into an Akai program, one note at a time.**
 
-**Version 1.1 · AKAI S5000 / S6000**
+**Version 1.2 · AKAI S5000 / S6000**
 
 [Home](../README.md) · [Quick start](QUICK-START.md) · [PDF manual](S56K-Expanded-Edition-User-Guide.pdf) · [Installation](INSTALLATION.md) · [Windows USB guide](USB-UPDATER.md)
 
 Read the [installation guide](INSTALLATION.md), [compatibility notes](COMPATIBILITY.md) and [risk disclaimer](../DISCLAIMER.md) before loading or installing firmware.
 
-The [release area](../releases/README.md) provides the V1.1 firmware BIN and the separate Windows updater. **Install V1.1 from floppy.** Firmware Updater 1.0 RC1 recognises the older Expanded Edition V1 and original Akai v2.14 images; it does not accept V1.1. The [USB guide](USB-UPDATER.md) covers those supported older images. Auto Sample itself does not require a computer or USB card.
+The [release area](../releases/README.md) provides the V1.2 firmware BIN and the separate Windows updater. **Install V1.2 from floppy.** Firmware Updater 1.0 RC1 recognises the older Expanded Edition V1 and original Akai v2.14 images; it does not accept V1.1 or V1.2. The [USB guide](USB-UPDATER.md) covers those supported older images. Auto Sample itself does not require a computer or USB card.
 
 Auto Sample sends MIDI notes to an external instrument, records its audio and assigns the recordings to the current program. You choose the pitches, velocity layers and recording behaviour. Optional Auto Loop processing prepares sustained samples after each recording.
 
@@ -24,7 +24,7 @@ Choose the sound on the instrument, set its receiving MIDI channel and leave tha
 
 Create an **empty program**, give it a useful name and open **Program Tools → Auto Sample**. The initial empty keygroup must contain no sample assignments. A run adds its own keygroups and velocity zones. To make a second run after completing or cancelling the first, start with another empty program.
 
-Leave generous free sample RAM. Stereo recordings and multiple velocity layers use more memory, and loop processing needs temporary copies while preserving the original recording. During a run, avoid editing samples simultaneously through ak.Sys or SysEx.
+Leave generous free sample RAM. Stereo recordings and multiple velocity layers use more memory, and loop processing needs temporary copies while preserving the original recording. During a run, close ak.Sys, the Editor and other sampler-control applications so they cannot request recording or memory operations at the same time.
 
 ## 2. Set the capture range
 
@@ -102,7 +102,7 @@ Unavailable controls disappear. Their values remain stored and reappear when the
 
 ## 6. Loop the sustained part
 
-![V1.1 Loop Setup showing percentage positions, crossfade, Crop After Loop OFF and Play Mode UNTIL RELEASE](../assets/screens/loop-setup.png)
+![Loop Setup showing percentage positions, crossfade, Crop After Loop OFF and Play Mode UNTIL RELEASE](../assets/screens/loop-setup.png)
 
 Enable **AUTO LOOP** and open **LOOP SETUP**. Its percentages refer to the **captured held-note portion**, starting at the sample's playback start and ending before the external release tail. They do not include the tail in their measurement.
 
@@ -148,9 +148,15 @@ Press **START** on the main page. The display follows preparation, waiting for a
 
 ![Loop processing progress with looped and review counts](../assets/screens/loop-progress.png)
 
-**CANCEL** stops the run while keeping completed sample assignments in RAM. Finishing an active recording or processing operation may take a moment, including when Cancel is pressed just after Start. The current unfinished capture may not be assigned to the program; inspect the samples in RAM if the display asks you to check them.
+**Between recordings, V1.2 can display WAITING FOR SAMPLE MEMORY or ORGANISING SAMPLE MEMORY.** The sampler is waiting for background cleanup or arranging free recording space before the next note. This can take time, even when the resource page shows plenty of total free RAM. Let it finish; completed samples are retained. The sampler checks the available recording space again before continuing.
+
+With **CROP AFTER LOOP OFF**, the final extraction stage is labelled **FINALIZING SAMPLE**, rather than CROPPING. It preserves the recorded release as described above; the label does not mean that cropping was enabled.
+
+**CANCEL** stops the run while keeping completed sample assignments in RAM. Finishing an active recording or processing operation may take a moment, including when Cancel is pressed just after Start. If sample memory is being organised, cancellation waits for the owned cleanup to finish before another capture can begin. The current unfinished capture may not be assigned to the program; inspect the samples in RAM if the display asks you to check them.
 
 If a loop edit is safely refused before processing begins, the original recording is retained for **REVIEW** and the batch can continue. An uncertain processing failure stops the run with a specific error. The display can show **LAST LOOP**, the affected processing stage, and an Akai error code when available. Photograph the whole screen for troubleshooting.
+
+The capture summary can show memory wait, organisation and retry counters. A **LAST LOOP** review message can use that footer instead. If recording still cannot arm, the diagnostic screen preserves the failure details and counters; photograph it before leaving the page. A temporary native recording-memory error can be retried once after recorder cleanup. Other arm errors stop the run.
 
 A restart-required fault keeps its explanation on screen and removes the inactive Cancel button. Further Cancel/Exit presses do not hide that message. Save completed work if the ordinary controls remain responsive before restarting.
 
@@ -171,6 +177,9 @@ After completion, play across the keygroups and velocity boundaries. For looped 
 | A loop is left for review | Try a steadier section, a longer held recording, different percentages or crossfade settings. The original recording is available for listening and manual work. |
 | The saved tail is present but cannot be heard on playback | Check PLAY MODE and the program's amplitude-envelope release. With UNTIL RELEASE, looping stops when you release the playback key. |
 | The crossfade seems shorter than requested | With Crop OFF, the fade is shortened to protect the recorded release. Try an earlier Loop End if more held audio is needed. |
+| **WAITING FOR SAMPLE MEMORY / ORGANISING SAMPLE MEMORY** | Allow cleanup to finish. Total free RAM and immediately usable recording space are different. If you cancel, cleanup must still complete. |
+| **RECORD ARM FAILED** | Photograph the diagnostic screen and record the settings, completed count and free-memory readings. Genuine insufficient RAM can still stop a run; save completed samples before clearing space or restarting. |
+| **FINALIZING SAMPLE**, with Crop OFF | This is the release-preserving extraction stage. The recorded tail is kept; cropping after the loop has not been enabled. |
 | **INPUT MONITOR UNAVAILABLE** | Check the recording source and whether another recording function owns the recorder. Monitoring can pause during loop processing and between captures. |
 | An option has disappeared | Enable its parent option: AUTO END for quiet controls, AUTO LOOP for loop controls, and CROSSFADE for amount/shape. |
 | A run stops with a processing or restart message | Stop further runs, inspect the samples already in RAM and record the settings/message for feedback. Save completed work through the normal controls if they remain responsive. |
@@ -179,9 +188,9 @@ For useful feedback, include your sampler model, mono/stereo mode, source instru
 
 ## 9. Expanded Edition startup
 
-The boot screen shows a CPU/circuit graphic, the correct **S5000 EX** or **S6000 EX** model logo, and **EXPANDED EDITION V1.1**. The EX lettering is outlined to match the model design.
+The boot screen shows a CPU/circuit graphic, the correct **S5000 EX** or **S6000 EX** model logo, and **EXPANDED EDITION V1.2**. The EX lettering is outlined to match the model design.
 
-The separate **Operating System VERSION 2.14** field is retained for compatibility. Expanded Edition V1.1 identifies the added feature set; it does not change the underlying Akai version identity. Use the checksum accompanying a firmware download to identify its exact file.
+The separate **Operating System VERSION 2.14** field is retained for compatibility. Expanded Edition V1.2 identifies the added feature set; it does not change the underlying Akai version identity. Use the checksum accompanying a firmware download to identify its exact file.
 
 ---
 

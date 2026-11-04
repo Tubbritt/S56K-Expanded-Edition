@@ -2,7 +2,7 @@
 
 [Home](../README.md) · [User guide](USER-GUIDE.md) · [Quick start](QUICK-START.md)
 
-From the first note to the finished program, these are the V1.1 screens you use on the sampler. Images are native firmware renders at 320 × 240 pixels, with example settings and progress states. Click an image to inspect it.
+From the first note to the finished program, these are the V1.2 screens you use on the sampler. Images are native firmware renders at 320 × 240 pixels, with example settings and progress states. Click an image to inspect it.
 
 ## Set up a capture
 
@@ -34,15 +34,15 @@ Percentage positions define the initial loop within the held note. Akai Auto Fin
 
 ![Loop processing progress with looped and review counts](../assets/screens/loop-progress.png)
 
-The progress screen follows recording and processing. Completed assignments remain in RAM when you cancel; saving stays manual.
+The progress screen follows recording and processing. Between notes, **WAITING FOR SAMPLE MEMORY** or **ORGANISING SAMPLE MEMORY** indicates that recording space is being prepared. With Crop OFF, the final extraction stage reads **FINALIZING SAMPLE**. Completed assignments remain in RAM when you cancel; cleanup finishes before another capture can start, and saving stays manual.
 
 ## A new startup for both models
 
 | S5000 EX | S6000 EX |
 | --- | --- |
-| ![S5000 EX startup with CPU circuit artwork and EXPANDED EDITION V1.1 caption](../assets/screens/boot-s5000.png) | ![S6000 EX startup with CPU circuit artwork and EXPANDED EDITION V1.1 caption](../assets/screens/boot-s6000.png) |
+| ![S5000 EX startup with CPU circuit artwork and EXPANDED EDITION V1.2 caption](../assets/screens/boot-s5000.png) | ![S6000 EX startup with CPU circuit artwork and EXPANDED EDITION V1.2 caption](../assets/screens/boot-s6000.png) |
 
-A shared CPU/circuit graphic, clean outlined EX lettering and **EXPANDED EDITION V1.1** give the update its own identity. Each sampler displays its correct model name. The separate **Operating System VERSION 2.14** field remains unchanged for compatibility.
+A shared CPU/circuit graphic, clean outlined EX lettering and **EXPANDED EDITION V1.2** give the update its own identity. Each sampler displays its correct model name. The separate **Operating System VERSION 2.14** field remains unchanged for compatibility.
 
 ---
 

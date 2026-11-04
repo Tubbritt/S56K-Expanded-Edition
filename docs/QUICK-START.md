@@ -4,7 +4,7 @@
 
 [Home](../README.md) · [Full user guide](USER-GUIDE.md) · [Installation](INSTALLATION.md)
 
-These steps begin with **S56K Expanded Edition V1.1** running on your sampler. Use the [floppy installation guide](INSTALLATION.md) and read the [risk disclaimer](../DISCLAIMER.md). The existing Windows updater 1.0 RC1 does not accept the V1.1 BIN.
+These steps begin with **S56K Expanded Edition V1.2** running on your sampler. Use the [floppy installation guide](INSTALLATION.md) and read the [risk disclaimer](../DISCLAIMER.md). The existing Windows updater 1.0 RC1 does not accept the V1.2 BIN.
 
 ## 1. Connect your instrument
 
@@ -42,7 +42,7 @@ Auto Sample provides input monitoring during setup and recording, where supporte
 
 ## 4. Capture and listen
 
-Return to the main page and press **START**. The sampler triggers the note, records the audio and adds the sample to your program in RAM.
+Return to the main page and press **START**. The sampler triggers the note, records the audio and adds the sample to your program in RAM. Between notes, **WAITING FOR SAMPLE MEMORY** or **ORGANISING SAMPLE MEMORY** means it is preparing recording space. Allow that operation to finish; completed samples remain in RAM.
 
 Play it back and check the attack, level, pitch and release. Use another empty program for a further test.
 
@@ -58,7 +58,7 @@ In LOOP SETUP, **CROP AFTER LOOP OFF** now keeps the complete recorded release. 
 
 Listen across the completed program, then use the ordinary **SAVE** page to save the program **with its samples**. Auto Sample never saves the recordings to disk automatically.
 
-Avoid simultaneous ak.Sys, Editor or SysEx sample editing during Auto Loop. CANCEL retains completed assignments in RAM. If a run stops, keep a photograph of the full status message and any **LAST LOOP** detail before restarting.
+Close ak.Sys, the Editor and other sampler-control applications during Auto Sample. CANCEL retains completed assignments in RAM and waits for any owned memory cleanup to finish. If a run stops, keep a photograph of the full status message and any **LAST LOOP** detail before restarting.
 
 
 [Explore all the controls →](USER-GUIDE.md) · [Compatibility](COMPATIBILITY.md)
