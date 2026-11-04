@@ -1,5 +1,7 @@
 # S56K Firmware Updater 1.0 RC1
 
+> Historical release, superseded by [Firmware Updater 1.1 RC1](updater-1.1-rc1.md). Download the new app for Expanded Edition V1.1 and V1.2 support. The original ZIP and test record below are unchanged.
+
 [Home](../README.md) · [Downloads](README.md) · [Release history](../CHANGELOG.md) · [Windows USB guide](../docs/USB-UPDATER.md) · [Compatibility](../docs/COMPATIBILITY.md)
 
 ![Illustrated updater ready to install S56K-EX.bin](../assets/updater/ready-to-install.png)
@@ -10,7 +12,7 @@
 
 **23 October 2026 · Release candidate · Unsigned**
 
-> **Compatibility update — 4 November 2026:** this unchanged updater accepts original Expanded Edition **v1** and factory Akai **v2.14** only. It **does not accept Expanded Edition V1.1 or V1.2**. Install V1.2 using the [floppy guide](../docs/INSTALLATION.md).
+> **Compatibility update — 4 November 2026:** this unchanged updater accepts original Expanded Edition **v1** and factory Akai **v2.14** only. It **does not accept Expanded Edition V1.1 or V1.2**. Install V1.2 using [updater 1.1 RC1](updater-1.1-rc1.md) or [floppy](../docs/INSTALLATION.md).
 
 **[Download Windows updater ZIP](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/updater-v1.0-rc1/releases/updater/1.0-rc1/S56K-Firmware-Updater-1.0-RC1-win64.zip) · [SHA256SUMS.txt](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/updater-v1.0-rc1/releases/updater/1.0-rc1/SHA256SUMS.txt) · [Driver setup and installation](../docs/USB-UPDATER.md)**
 

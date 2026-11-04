@@ -8,7 +8,7 @@
 
 Read the [installation guide](INSTALLATION.md), [compatibility notes](COMPATIBILITY.md) and [risk disclaimer](../DISCLAIMER.md) before loading or installing firmware.
 
-The [release area](../releases/README.md) provides the V1.2 firmware BIN and the separate Windows updater. **Install V1.2 from floppy.** Firmware Updater 1.0 RC1 recognises the older Expanded Edition V1 and original Akai v2.14 images; it does not accept V1.1 or V1.2. The [USB guide](USB-UPDATER.md) covers those supported older images. Auto Sample itself does not require a computer or USB card.
+The [release area](../releases/README.md) provides the V1.2 firmware BIN and the separate Windows updater. **Install V1.2 over USB with Firmware Updater 1.1 RC1, or from floppy.** The updater also supports Expanded V1.1, V1 and original Akai v2.14. Follow the [USB guide](USB-UPDATER.md) for driver setup and installation. Auto Sample itself does not require a computer or USB card.
 
 Auto Sample sends MIDI notes to an external instrument, records its audio and assigns the recordings to the current program. You choose the pitches, velocity layers and recording behaviour. Optional Auto Loop processing prepares sustained samples after each recording.
 

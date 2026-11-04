@@ -4,15 +4,15 @@
 
 ## About this version
 
-**Firmware Updater 1.0 RC1 does not accept Expanded Edition V1.1 or V1.2.** Use the [floppy installation guide](INSTALLATION.md) for V1.2. This reference covers the unchanged updater and its two supported older images.
+**Firmware Updater 1.1 RC1** recognises Expanded Edition **V1.2, V1.1, V1** and **original Akai OS 2.14**. It also includes a USB driver setup assistant. The app remains standalone; the Editor does not perform firmware installation.
 
-The app is **1.0 RC1** and is unsigned. Windows may show an unknown-publisher or SmartScreen warning; check the download source and checksum rather than disabling Windows security or driver-signature enforcement. The reported physical test used Expanded Edition **v1**, an S6000 and Windows 11 Pro 25H2; see [compatibility](COMPATIBILITY.md) for coverage.
+The app is unsigned. Windows may show an unknown-publisher or SmartScreen warning; check the download source and checksum rather than disabling Windows security or driver-signature enforcement. Windows 11 on Intel/AMD x64 is the supported host platform. Windows on ARM and other Windows versions have not been verified.
 
-The unchanged tested ZIP includes its original `START_HERE.html`, packaged before the subsequent successful hardware round-trip. The visual guide and compatibility page give current instructions and test status. Windows on ARM and other Windows versions have not been verified.
+The earlier reported physical USB round-trip used updater 1.0 RC1, Expanded V1, an S6000 and Windows 11 Pro 25H2. V1.2's reported physical flash test used the floppy procedure. The new updater's software checks are described in [compatibility](COMPATIBILITY.md); no new physical USB round-trip is claimed.
 
 ## Driver fallback: WinUSB unavailable or no registered interface
 
-Some Windows configurations need an additional interface registration. Use this fallback only when the Device Manager method is unavailable or leaves the app reporting no registered interface.
+Start with **USB driver setup** in the updater, or the Device Manager steps in the [visual guide](USB-UPDATER.md). Some Windows configurations need an additional interface registration. Use this fallback only when those steps are unavailable or leave the app reporting no registered interface.
 
 1. Download **Zadig** from **[zadig.akeo.ie](https://zadig.akeo.ie/)** and run it. Driver installation normally requires administrator approval.
 2. Choose **Options → List All Devices**, select the Akai sampler and confirm **USB ID `09E8 005E`**. Do not select a keyboard, mouse, hub or another device.
@@ -21,37 +21,38 @@ Some Windows configurations need an additional interface registration. Use this 
 
 Both methods assign Microsoft's WinUSB to the sampler; Zadig is an optional setup helper, not a new driver requirement. See [Microsoft's WinUSB installation documentation](https://learn.microsoft.com/en-us/windows-hardware/drivers/usbcon/winusb-installation) for interface-registration details.
 
-**What this changes:** the Windows driver association, not the sampler's firmware. The updater itself does not install drivers or edit their registry settings. You do not need to disable driver-signature enforcement. Assigning WinUSB does not make unmodified ak.Sys work; ak.Sys requires its separate compatibility setup and may stop recognising a device previously using its legacy driver. This updater needs neither ak.Sys nor its shim.
-
+**What this changes:** the Windows driver association, not the sampler's firmware. The updater's assistant opens Microsoft's driver wizard only after you explicitly choose the device and action; it does not silently replace drivers. You do not need to disable driver-signature enforcement. Assigning WinUSB does not make unmodified ak.Sys work; ak.Sys requires its separate compatibility setup and may stop recognising a device previously using its legacy driver. This updater needs neither ak.Sys nor its shim.
 
 ## Supported files
 
-Both supported firmware files are **1,048,576 bytes**. Renaming a recognised file is fine; editing it or using a different revision causes rejection. The recognised Expanded image is the original **v1 / EX artwork revision 2**, not the current V1.2 release.
+All four supported firmware images are **1,048,576 bytes**. Renaming a recognised file is fine; editing it or using a different revision causes rejection. The app shows the edition identified by its complete SHA-256 checksum.
 
 | Firmware | SHA-256 |
 | --- | --- |
-| **Expanded Edition v1 — `S56K-EX.bin`** | `5b2559d3137f29516130572c754c5cf1be45058a25d70cff5fbbc221944e7f2a` |
-| **Original Akai v2.14 — `s56v214.bin`** | `05e466a7a19e5abde1e53660e0069bf2fb34bb33f705841185883a78b5369402` |
+| **Expanded Edition V1.2 — `S56K-EX.bin`** | `e29e16a1c9dde87dd5ac543bed3ff2d195b56931765cc24b84ba7dfb4a767474` |
+| **Expanded Edition V1.1 — `S56K-EX.bin`** | `cc3f6c056e0fb032303ee61f2e16c419c22708377cf888f0c1737be74321df93` |
+| **Expanded Edition V1 / EX artwork revision 2 — `S56K-EX.bin`** | `5b2559d3137f29516130572c754c5cf1be45058a25d70cff5fbbc221944e7f2a` |
+| **Original Akai OS 2.14 — `s56v214.bin`** | `05e466a7a19e5abde1e53660e0069bf2fb34bb33f705841185883a78b5369402` |
 
-The factory BIN is recognised for restoration but is not included in these downloads. Retain your original Akai image if you need that option. Other firmware revisions require an updater that explicitly supports them; do not bypass the file checks. V1.2's checksum starts `e29e16a1`; it is intentionally absent from RC1's list and must be installed from floppy for this release.
+The factory BIN is recognised for restoration but is not included in these downloads. Retain your original Akai image if you need that option. Unknown, corrupted and private test images remain rejected. The old 1.0 RC1 app accepts only the last two rows; use **1.1 RC1** for V1.1 or V1.2.
 
-To check a download in PowerShell, run `Get-FileHash .\S56K-EX.bin -Algorithm SHA256` and compare the result with the table or the release's `SHA256SUMS.txt`. The updater ZIP's SHA-256 is:
+To check a download in PowerShell, run `Get-FileHash .\S56K-EX.bin -Algorithm SHA256` and compare the result with the table or the release's `SHA256SUMS.txt`. The **updater 1.1 RC1 ZIP** SHA-256 is:
 
-`bcb49f0354e3a9b5eaf043ed17b8a346bb5acf6a35193d3ec9cef33f0566375c`
+`912ee879386676ac6a159a271e7d1f27115988a51bf644eb254224be806372c1`
 
-**Updating from factory OS:** the running sampler OS performs the flash write. Factory v2.14 retains its older allocation and final-byte comparison limitations until the new OS is running. The successful factory-to-Expanded **v1** hardware test establishes that route on the tested setup; it does not establish V1.1 or V1.2 USB support or remove those older limitations. Always start with a freshly booted, unloaded sampler.
+**Updating from factory OS:** the running sampler OS performs the flash write. Factory v2.14 retains its older allocation and final-byte comparison limitations until the new OS is running. Adding new target images does not change the OS that performs the installation. Always start with a freshly booted, unloaded sampler.
 
 ## Troubleshooting
 
 | What you see | What to do |
 | --- | --- |
-| **No sampler listed** | Check power, the IB-S56USB card, USB cable and direct PC port. Confirm the Akai hardware IDs in Device Manager, then click Refresh. |
-| **Driver missing / WinUSB not assigned** | Use the Device Manager steps in the [visual guide](USB-UPDATER.md) for `09E8:005E` only. |
-| **No usable interface registered** | Use Zadig to install a device-specific WinUSB association, reconnect USB and refresh. |
-| **Cannot open / access denied / connection busy** | Close ak.Sys and other sampler USB tools. Reconnect USB and try Connect again before installation. |
+| **No sampler listed** | Check power, the IB-S56USB card, USB cable and direct PC port. Open **USB driver setup** to find present Akai devices and inspect the driver. |
+| **Driver missing / WinUSB not assigned** | Select the Akai device in the assistant and choose **Change Windows driver…**. Follow the [visual guide](USB-UPDATER.md) for `09E8:005E` only. |
+| **No usable interface registered** | Use the WinUSB fallback above, reconnect USB and refresh. |
+| **Cannot open / access denied / connection busy** | Close the Editor, ak.Sys and other sampler USB tools. Reconnect USB and try Connect again before installation. |
 | **Timeout during Connect** | Save the report. Check cable and power; close competing tools. If needed, save sampler work and restart it before trying again. This advice applies before an update, not during flash writing. |
-| **V1.1 / V1.2 BIN rejected** | Expected with updater 1.0 RC1: use the [V1.2 floppy procedure](INSTALLATION.md). Renaming the file or changing the Windows driver cannot add support. |
-| **Other BIN rejected** | Check it against the two supported hashes above. Do not select a test build, ZIP file or GitHub “Source code” archive. |
+| **V1.1 / V1.2 BIN rejected** | Check that the app says **1.1 RC1** and compare the BIN's full checksum above. Replace an older 1.0 RC1 app with the current download; changing the Windows driver will not fix a file-check failure. |
+| **Other BIN rejected** | Check it against the four supported hashes above. Do not select a private test build, ZIP file or GitHub “Source code” archive. |
 | **Install disabled after a completed update** | This is intentional. Close and reopen the app for a new session. |
 
 **If an update fails after erasure may have started:** leave the sampler powered on initially, save the report and note its display. The OS in flash may be incomplete. Do not repeatedly retry or assume a power-cycle will fix it. Share the error with the project owner before further attempts; recovery may require the established floppy procedure. The updater cannot repair a sampler whose application cannot start USB services, and preserving the boot block does not guarantee recovery.

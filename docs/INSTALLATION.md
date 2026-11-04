@@ -6,13 +6,13 @@ The firmware image is **S56K-EX.bin**, shared by the AKAI S5000 and S6000. The b
 
 **[Download V1.2 — S56K-EX.bin](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/expanded-v1.2/releases/firmware/v1.2/S56K-EX.bin)** · **[SHA256SUMS.txt](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/expanded-v1.2/releases/firmware/v1.2/SHA256SUMS.txt)** · **[What changed](../releases/v1.2.md)**
 
-**Use floppy for V1.2.** The existing Windows Firmware Updater **1.0 RC1 does not accept V1.1 or V1.2**. It recognises only the original Expanded Edition v1 and factory Akai v2.14 images. Its USB instructions remain available for those files; changing the filename does not add support for V1.2.
+**Choose USB or floppy.** Firmware Updater **1.1 RC1** recognises V1.2, V1.1, V1 and original Akai v2.14. USB installation requires an IB-S56USB card and Microsoft WinUSB. The older updater 1.0 RC1 still rejects V1.1 and V1.2; download the new app for those images.
 
 | Route | V1.2 support | What you need |
 | --- | --- | --- |
 | **Temporary floppy load** | Runs V1.2 for that session without replacing the installed OS. | A readable floppy containing the verified BIN. |
 | **Floppy flash installation** | Permanently installs V1.2. | A verified floppy and stable power. |
-| **Windows updater 1.0 RC1** | **Does not accept V1.2.** | See the [USB guide](USB-UPDATER.md) for its supported older images. |
+| **Windows updater 1.1 RC1** | Permanently installs the exact V1.2 BIN over USB. | Windows 11 x64, an IB-S56USB card, WinUSB and the [current updater](USB-UPDATER.md). |
 
 USB is not needed for Auto Sample. On **4 November 2026**, the project owner confirmed that flashing this exact V1.2 BIN worked, in response to the supplied flash-and-reboot test. The confirmation did not restate the sampler model or itemise each check; see the [compatibility record](COMPATIBILITY.md).
 
@@ -29,8 +29,8 @@ Read the [flashing disclaimer](../DISCLAIMER.md) before proceeding. Permanent in
 
   In Windows PowerShell, use `Get-FileHash .\S56K-EX.bin -Algorithm SHA256`.
 
-- Use a known-readable floppy, a reliable drive and stable power. Copy **S56K-EX.bin** to the disk with no other OS BIN files present. This is a file copy, not a raw disk image. Read the copied file back on the computer and verify its checksum again. Stop if it cannot be read or its checksum differs.
-- Close ak.Sys, the Editor and other sampler USB tools. Disconnect computer USB for this floppy installation; the instrument's MIDI and audio connections can remain connected.
+- **For floppy installation:** use a known-readable floppy, a reliable drive and stable power. Copy **S56K-EX.bin** to the disk with no other OS BIN files present. This is a file copy, not a raw disk image. Read the copied file back on the computer and verify its checksum again. Stop if it cannot be read or its checksum differs.
+- Close ak.Sys, the Editor and other sampler USB tools. For floppy installation, disconnect computer USB; for USB installation, keep the updater's connection intact. The instrument's MIDI and audio connections can remain connected.
 
 ## 1. Load temporarily from floppy
 
@@ -55,11 +55,13 @@ An update that reports an error is not a successful installation. Record the exa
 
 The normal Utilities **SAVE SETTINGS / SAVE TO FLASH** function stores settings. It does not install the OS. Use the boot-time **Write Flash OS** prompt above.
 
-## 3. Windows USB installation compatibility
+## 3. Install permanently over USB
 
-**V1.2 is not supported by Firmware Updater 1.0 RC1.** The app rejects its unlisted checksum before installation. Do not bypass the file checks or use a renamed file to try to enable it. Use the floppy procedure for this release.
+Use **Firmware Updater 1.1 RC1** on Windows 11 x64. Start with a freshly booted sampler and no loaded libraries. Extract the app ZIP, connect the sampler through its IB-S56USB card and assign Microsoft WinUSB if necessary. The app's **USB driver setup** assistant can help identify the device and open Windows' driver wizard.
 
-The unchanged updater remains available for the original **Expanded Edition v1** and **Akai v2.14** images. Its historical successful USB round-trip used v1 on the established S6000 / Windows 11 Pro 25H2 setup. That result does not establish V1.2 USB installation, S5000 USB installation or installation through ak.Sys.
+Select the sampler and click **Connect**, then choose the V1.2 BIN. Confirm that the app identifies **Expanded Edition V1.2** and reports an exact SHA-256 match. Click **Install firmware** and confirm. Keep power and USB connected until completion; there is no safe cancellation after erasure starts. Save the report, remove any firmware floppy and restart to verify the installed V1.2 caption.
+
+The new app retains support for **Expanded V1.1**, **V1** and **original Akai v2.14**. The earlier physical USB round-trip used updater 1.0 RC1 with V1 and original v2.14 on an S6000 / Windows 11 Pro 25H2 setup. V1.2's hardware flashing confirmation used the floppy procedure; the new updater's software checks do not constitute a new physical USB test.
 
 **[Supported USB files, driver setup and updater instructions →](USB-UPDATER.md)**
 

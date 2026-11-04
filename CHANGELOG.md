@@ -9,7 +9,19 @@ requirements, known limits and testing.
 | Product | Current release | Date | Details |
 | --- | --- | --- | --- |
 | Sampler firmware | **Expanded Edition V1.2** | 4 November 2026 | [Release notes](releases/v1.2.md) · [GitHub Release](https://github.com/Tubbritt/S56K-Expanded-Edition/releases/tag/expanded-v1.2) |
-| Windows USB app | **Firmware Updater 1.0 RC1** · release candidate | 23 October 2026 | [Release notes](releases/updater-1.0-rc1.md) · [GitHub Release](https://github.com/Tubbritt/S56K-Expanded-Edition/releases/tag/updater-v1.0-rc1) |
+| Windows USB app | **Firmware Updater 1.1 RC1** · release candidate | 4 November 2026 | [Release notes](releases/updater-1.1-rc1.md) · [GitHub Release](https://github.com/Tubbritt/S56K-Expanded-Edition/releases/tag/updater-v1.1-rc1) |
+
+## Firmware Updater 1.1 RC1 — 4 November 2026
+
+Tag: `updater-v1.1-rc1`. **[Release notes and download](releases/updater-1.1-rc1.md).**
+
+- **V1.2 and V1.1 support:** recognises the exact published firmware BINs, fixing rejection by the older updater. Original Akai v2.14 and Expanded V1 remain supported.
+- **Edition identification:** the selected firmware edition appears in file validation, installation confirmation and reports.
+- **USB driver setup:** identifies present Akai USB devices and their current driver, and can open Windows' driver-selection wizard for the selected sampler after explicit confirmation and administrator approval.
+- **File checks retained:** validates the entire BIN and uses a fixed copy for installation. Corrupted, unknown and private test images remain rejected.
+- **Documentation and packaging:** updated setup guide, supported-image list and bundled licence, disclaimer and third-party notices. Firmware remains a separate download.
+
+The app remains standalone, unsigned and a release candidate. The previous physical USB round-trip used 1.0 RC1 with original Akai v2.14 and Expanded V1; the new software checks do not claim a new physical USB test. See [compatibility](docs/COMPATIBILITY.md). The V1.2 firmware BIN is unchanged.
 
 ## Expanded Edition V1.2 — 4 November 2026
 
@@ -25,7 +37,7 @@ Tag: `expanded-v1.2`. **[Complete plain-English changes and release notes](relea
 
 V1.1's release-tail, monitoring and loop/crossfade improvements remain in place. V1.2 reserves **8 KiB more CPU RAM than V1.1**; sample RAM capacity is unchanged. A full sampler can still run out of recording space. Saving remains manual.
 
-**Install V1.2 from floppy. Firmware Updater 1.0 RC1 is unchanged and accepts neither V1.1 nor V1.2.** V1.1's BIN has been removed from the current repository tree; its original tag and release history remain available.
+**Installation update:** Firmware Updater **1.1 RC1** now supports V1.2 over USB; floppy installation remains available. The older 1.0 RC1 app still rejects V1.1 and V1.2. V1.1's BIN has been removed from the current repository tree; its original tag and release history remain available.
 
 ## Expanded Edition V1.1 — 2 November 2026
 
@@ -45,7 +57,7 @@ Tag: `expanded-v1.1`. Superseded by V1.2. **[Complete plain-English changes and 
 
 Uses **4 KiB more CPU RAM than V1**, with sample RAM capacity unchanged. Saving remains manual. These are confirmed code-path fixes; the original reporter's unexplained STOPPED event was not conclusively reproduced.
 
-**Install V1.1 from floppy. Firmware Updater 1.0 RC1 is unchanged and does not accept V1.1.** The old BIN was removed from the current repository tree; the original V1 tag and release history remain available.
+V1.1 originally required floppy installation with the then-current updater 1.0 RC1. **Updater 1.1 RC1 now recognises the exact V1.1 BIN**; its historical firmware bytes are unchanged. The old BIN was removed from the current repository tree; the original V1 tag and release history remain available.
 
 ## Expanded Edition v1 — 23 October 2026
 
@@ -74,7 +86,7 @@ this does not establish S5000 USB installation coverage. See the
 
 ## Firmware Updater 1.0 RC1 — 23 October 2026
 
-Initial standalone Windows updater release candidate. Tag: `updater-v1.0-rc1`.
+Initial standalone Windows updater release candidate. Tag: `updater-v1.0-rc1`. Superseded by updater 1.1 RC1; the original ZIP remains available in its historical release.
 
 - **Connect, choose BIN, install:** a Windows 11 x64 USB workflow without ak.Sys.
 - **Exact firmware checks:** accepts the published Expanded Edition v1 image

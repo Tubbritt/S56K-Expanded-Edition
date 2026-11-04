@@ -4,7 +4,7 @@
 
 [Home](../README.md) · [Full user guide](USER-GUIDE.md) · [Installation](INSTALLATION.md)
 
-These steps begin with **S56K Expanded Edition V1.2** running on your sampler. Use the [floppy installation guide](INSTALLATION.md) and read the [risk disclaimer](../DISCLAIMER.md). The existing Windows updater 1.0 RC1 does not accept the V1.2 BIN.
+These steps begin with **S56K Expanded Edition V1.2** running on your sampler. Use the [installation guide](INSTALLATION.md) for USB installation with Firmware Updater 1.1 RC1 or floppy installation, and read the [risk disclaimer](../DISCLAIMER.md).
 
 ## 1. Connect your instrument
 

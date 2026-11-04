@@ -36,9 +36,14 @@ version.
 4. Record the testing that actually occurred: sampler model, relevant expansion
    cards, PC/Windows version, installation route and result. Distinguish software
    checks from reported hardware tests. Keep release candidates marked as such.
-5. Confirm firmware/updater compatibility. The current updater recognises exact
-   firmware hashes: a changed BIN may require a new updater release. Do not
-   imply an older updater accepts a new image without checking it.
+5. Check the current standalone updater against the **exact new firmware BIN**
+   before marking the firmware release current. Its file checks use complete
+   SHA-256 hashes. If it does not accept that BIN, update, test and release the
+   updater alongside the firmware. Keep support for the previously published
+   approved images, verify the correct edition labels and retain rejection of
+   corrupted or unknown files. Update both products' download links and guides
+   together; do not leave the current firmware incompatible with the current
+   updater.
 
 The updater's tested ZIP should include the notices required by its applicable
 licences. When accompanying notices are supplied separately for an existing

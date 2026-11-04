@@ -16,7 +16,7 @@ Bring an external instrument into your S5000 or S6000 as a playable program. **A
 | **S56K Expanded Edition** | Optional sampler firmware with Auto Sample and Auto Loop features. This repository. |
 | **[S56K Firmware Updater](https://github.com/Tubbritt/S56K-Expanded-Edition/releases)** | A separate app for installing supported firmware images. |
 
-All three support the **AKAI S5000 and S6000**. Firmware and updater downloads live here; the Editor has its own repository. The Editor works with **stock OS 2.14** as well as Expanded Edition, so it does not require a firmware upgrade. Firmware installation uses the separate updater for its supported images, or floppy. **V1.2 currently requires floppy installation.**
+All three support the **AKAI S5000 and S6000**. Firmware and updater downloads live here; the Editor has its own repository. The Editor works with **stock OS 2.14** as well as Expanded Edition, so it does not require a firmware upgrade. Install V1.2 with **Firmware Updater 1.1 RC1 over USB**, or from floppy. The updater remains a separate application.
 
 ### Download your upgrade
 
@@ -24,12 +24,12 @@ All three support the **AKAI S5000 and S6000**. Firmware and updater downloads l
 
 | For your sampler | For your Windows PC |
 | --- | --- |
-| **Expanded Edition V1.2** | **Firmware Updater 1.0 RC1** |
-| One OS image for the S5000 and S6000. **Install V1.2 from floppy.** | Standalone Windows 11 x64 app for **original Akai v2.14 and Expanded V1**. It does **not** accept V1.1 or V1.2. |
-| **[Download S56K-EX.bin](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/expanded-v1.2/releases/firmware/v1.2/S56K-EX.bin)** | **[Download Windows updater ZIP](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/updater-v1.0-rc1/releases/updater/1.0-rc1/S56K-Firmware-Updater-1.0-RC1-win64.zip)** |
-| [V1.2 release notes](releases/v1.2.md) · [Installation](docs/INSTALLATION.md) | [Updater release notes](releases/updater-1.0-rc1.md) · [USB driver & app guide](docs/USB-UPDATER.md) |
+| **Expanded Edition V1.2** | **Firmware Updater 1.1 RC1** |
+| One OS image for the S5000 and S6000. **Install over USB or from floppy.** | Standalone Windows 11 x64 app for **original Akai v2.14 and Expanded V1, V1.1 and V1.2**. Includes USB driver setup assistance. |
+| **[Download S56K-EX.bin](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/expanded-v1.2/releases/firmware/v1.2/S56K-EX.bin)** | **[Download Windows updater ZIP](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/updater-v1.1-rc1/releases/updater/1.1-rc1/S56K-Firmware-Updater-1.1-RC1-win64.zip)** |
+| [V1.2 release notes](releases/v1.2.md) · [Installation](docs/INSTALLATION.md) | [Updater release notes](releases/updater-1.1-rc1.md) · [USB driver & app guide](docs/USB-UPDATER.md) |
 
-The USB updater needs an **IB-S56USB card** and Microsoft's **WinUSB** driver. Its confirmed S6000 USB round-trip used the previous Expanded V1 firmware. The owner has confirmed successful V1.2 flashing after receiving the floppy flash-and-reboot procedure. The preceding recovery test build was reported stable; this does not establish V1.2 USB compatibility. See [compatibility](docs/COMPATIBILITY.md) for the scope of testing and [downloads](releases/README.md) for checksums. Read the [flashing disclaimer](DISCLAIMER.md) before installing.
+The USB updater needs an **IB-S56USB card** and Microsoft's **WinUSB** driver. Updater 1.1 RC1 recognises the exact V1.2 BIN and retains the earlier supported images. The owner confirmed V1.2 flashing using the floppy procedure; the earlier physical USB round-trip used updater 1.0 RC1 and Expanded V1. See [compatibility](docs/COMPATIBILITY.md) for the scope of testing and [downloads](releases/README.md) for checksums. Read the [flashing disclaimer](DISCLAIMER.md) before installing.
 
 ![Auto Sample: choose notes and velocities, record an external instrument and automatically map the results](assets/artwork/auto-sample.png)
 
@@ -81,15 +81,15 @@ One firmware image selects the right artwork for your sampler. The separate **Op
 
 **[View the screen gallery →](docs/SCREEN-GALLERY.md)**
 
-### Windows updater for earlier firmware
+### Windows firmware updater
 
 ![Illustrated Windows updater screen adapted from the supplied screenshot](assets/updater/ready-to-install.png)
 
 *Illustrated app screen, adapted from the supplied Windows screenshot.*
 
-**Connect → Choose BIN → Install.** The standalone updater checks the connected sampler and exact firmware file before installation, shows progress and saves local reports. **Version 1.0 RC1 accepts Expanded V1 and original Akai v2.14 only. It rejects V1.1 and V1.2.** Use the [floppy instructions](docs/INSTALLATION.md) for the current release.
+**Connect → Choose BIN → Install.** The standalone updater checks the connected sampler and exact firmware file before installation, shows progress and saves local reports. **Version 1.1 RC1 supports Expanded V1.2, V1.1, V1 and original Akai v2.14.** Select the exact BIN for the edition you want to install. The older 1.0 RC1 app does not accept V1.1 or V1.2.
 
-If Windows cannot find the sampler, the illustrated project manual and [USB guide](docs/USB-UPDATER.md) walk through identifying the Akai device, assigning WinUSB and checking the connection. USB installation writes flash; temporary loading remains available through floppy.
+If Windows cannot find the sampler, **USB driver setup** identifies the Akai device and can open Windows’ driver-selection wizard. The illustrated manual and [USB guide](docs/USB-UPDATER.md) explain assigning WinUSB and checking the connection. USB installation writes flash; temporary loading remains available through floppy.
 
 **[Follow the illustrated USB walkthrough →](docs/USB-UPDATER.md)**
 
@@ -99,7 +99,7 @@ If Windows cannot find the sampler, the illustrated project manual and [USB guid
 | --- | --- |
 | **[Quick start](docs/QUICK-START.md)** | Your first recording, from connecting cables to saving a program. |
 | **[Illustrated manual](docs/USER-GUIDE.md)** · **[PDF](docs/S56K-Expanded-Edition-User-Guide.pdf)** | Notes, layers, timing, loops and troubleshooting. |
-| **[Installation guide](docs/INSTALLATION.md)** | V1.2 temporary floppy loading and permanent flashing; USB compatibility explained. |
+| **[Installation guide](docs/INSTALLATION.md)** | V1.2 USB installation, temporary floppy loading and permanent floppy flashing. |
 | **[Windows USB guide](docs/USB-UPDATER.md)** | Driver setup, the updater, verification and troubleshooting. |
 | **[V1.2 release notes](releases/v1.2.md)** | Features, behavior and practical limits. |
 | **[Compatibility](docs/COMPATIBILITY.md)** | Model support and the available software/hardware verification evidence. |

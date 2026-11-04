@@ -10,14 +10,14 @@ Auto Sample uses the sampler's MIDI outputs and recording inputs. USB is not req
 
 | Download | Supported use |
 | --- | --- |
-| **[Expanded Edition V1.2 — S56K-EX.bin](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/expanded-v1.2/releases/firmware/v1.2/S56K-EX.bin)** | Shared S5000/S6000 firmware. Temporary floppy loading or permanent floppy installation. |
-| **[Firmware Updater 1.0 RC1](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/updater-v1.0-rc1/releases/updater/1.0-rc1/S56K-Firmware-Updater-1.0-RC1-win64.zip)** | Standalone Intel/AMD Windows x64 app; IB-S56USB card and WinUSB required. Accepts only original Expanded Edition v1 and factory Akai v2.14. **Rejects V1.1 and V1.2.** |
+| **[Expanded Edition V1.2 — S56K-EX.bin](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/expanded-v1.2/releases/firmware/v1.2/S56K-EX.bin)** | Shared S5000/S6000 firmware. Temporary floppy loading, permanent floppy installation or USB installation with updater 1.1 RC1. |
+| **[Firmware Updater 1.1 RC1](https://github.com/Tubbritt/S56K-Expanded-Edition/raw/refs/tags/updater-v1.1-rc1/releases/updater/1.1-rc1/S56K-Firmware-Updater-1.1-RC1-win64.zip)** | Standalone Intel/AMD Windows x64 app; IB-S56USB card and WinUSB required. Accepts the exact published Expanded V1.2, V1.1 and V1 images, plus original Akai v2.14. Includes USB driver setup assistance. |
 
 V1.2 firmware SHA-256: `e29e16a1c9dde87dd5ac543bed3ff2d195b56931765cc24b84ba7dfb4a767474`.
 
-Updater ZIP SHA-256: `bcb49f0354e3a9b5eaf043ed17b8a346bb5acf6a35193d3ec9cef33f0566375c`.
+Updater 1.1 RC1 ZIP SHA-256: `912ee879386676ac6a159a271e7d1f27115988a51bf644eb254224be806372c1`.
 
-**Use floppy to install V1.2.** The updater has not changed with this firmware release. Its historical USB success does not add the new BIN to its supported-file list.
+**Use updater 1.1 RC1 for V1.2 USB installation, or use floppy.** The older 1.0 RC1 app accepts only Expanded V1 and original Akai v2.14. Each supported BIN is checked against its full SHA-256; unknown or modified images remain rejected.
 
 ## Verification evidence
 
@@ -30,10 +30,11 @@ Updater ZIP SHA-256: `bcb49f0354e3a9b5eaf043ed17b8a346bb5acf6a35193d3ec9cef33f05
 | **V1.1 software verification** | All **16** software-verification suites passed for the exact published BIN, followed by independent review. Checks cover startup, layout, both model boot-render paths, recording, monitoring, looping, cancellation and installer behavior. Bounded emulation and peripheral fixtures do not reproduce every hardware or timing condition. |
 | **V1.1 pre-release operation** | The owner reported the preceding private T2 build working very well. V1.1 changes only its boot caption and text pointer; executable code and memory layout are identical. The feedback did not restate the model or itemise individual tests. |
 | **Earlier Auto Sample on S5000 and S6000** | Successful operation was reported on both models during feature development. This historical result does not separately establish V1.2 flashing on both. |
-| **Standalone Windows updater: hardware** | On **23 October 2026**, the owner confirmed an **Expanded Edition v1 → original Akai v2.14 → Expanded Edition v1** USB round-trip after receiving the reboot and visual-check procedure. The established setup was **S6000 / Windows 11 Pro 25H2**. No separate S5000 USB, V1.1 USB or V1.2 USB result is established by that test. |
-| **Standalone Windows updater: software** | Seven native-firmware integration cases, portable protocol tests, ten WinUSB-wrapper cases and GUI checks passed for the unchanged updater. Its supported-file checks reject V1.1 and V1.2. |
+| **Updater 1.0 RC1: earlier hardware test** | On **23 October 2026**, the owner confirmed an **Expanded Edition v1 → original Akai v2.14 → Expanded Edition v1** USB round-trip after receiving the reboot and visual-check procedure. The established setup was **S6000 / Windows 11 Pro 25H2**. No separate S5000 USB, V1.1 USB or V1.2 USB result is established by that test. |
+| **Updater 1.1 RC1: software verification** | All four approved firmware images passed exact-file validation; 36 altered-image cases were rejected. All 32 host/native-firmware cases passed, covering 16 running/target combinations and 16 transfer-failure cases, with startup checks for all four resulting images. The actual Windows executable passed file-selection, edition-label, rejection, report and driver-assistant checks under Wine. WinUSB wrapper and driver-helper fixtures also passed. These are controlled software checks, not physical USB or flash tests. |
+| **Updater 1.1 RC1: hardware scope** | No new physical USB round-trip or real Windows driver reassignment is claimed for this app. The V1.2 hardware flashing confirmation above used the supplied floppy procedure; the earlier USB result belongs to updater 1.0 RC1. |
 | **Windows / ak.Sys installation** | The standalone updater does not require ak.Sys. Successful use of it does not verify firmware installation through ak.Sys. |
-| **Other hosts and configurations** | Windows on ARM, other Windows versions and wider USB-card/host combinations have not been verified. The app is unsigned and remains version 1.0 RC1. |
+| **Other hosts and configurations** | Windows on ARM, other Windows versions and wider USB-card/host combinations have not been verified. The current updater is unsigned and remains a release candidate, version 1.1 RC1. |
 
 These hardware results are owner reports. They are not independent flash readback, recorded failure-recovery tests or guarantees for every machine. The published V1.2 BIN is byte-for-byte the file supplied for the reported flash test; its identity is established by the full SHA-256 checksum.
 
@@ -59,7 +60,7 @@ The [installation guide](INSTALLATION.md) separates temporary floppy loading fro
 
 After successful permanent installation, remove the firmware floppy before restarting to verify the image stored in flash. The official **2.14** version field does not distinguish these editions: check the full V1.2 caption.
 
-The [USB guide](USB-UPDATER.md) covers WinUSB driver setup and the unchanged updater's supported **older** images. It is not a V1.2 USB installation procedure.
+The [USB guide](USB-UPDATER.md) covers driver setup and V1.2 installation using updater **1.1 RC1**, including its exact-file checks and reboot verification. The same app retains support for the earlier approved images.
 
 ## About the images
 
